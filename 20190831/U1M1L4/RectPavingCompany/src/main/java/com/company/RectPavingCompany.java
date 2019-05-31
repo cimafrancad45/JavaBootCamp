@@ -27,13 +27,18 @@ public class RectPavingCompany {
 
         //perimeter formula shouldn't be subtracted fixed;
 
-        int perimeter = 2*length + 2*width;
+        int perimeter = (2*length) + (2*width);
 
         System.out.format("The area of the driveway is %d square feet.%n", area);
         System.out.format("The perimeter of the driveway is %d square feet.%n", perimeter);
 
-        //The line is printing out 6 decimal points for the cost, changed to 2 decimal points for better formatting.
+        /*
+
+        The perimeter cost calculation was wrong and used a + operator instead of a * operator. This was fixed.
+        The line is printing out 6 decimal points for the cost, changed to 2 decimal points for better formatting.
+
+         */
         System.out.format("The cost of the cement is %.2f.%n", area*cementCost);
-        System.out.format("The cost of the framing/footers is %.2f.%n", perimeter+framingCost);
+        System.out.format("The cost of the framing/footers is %.2f.%n", perimeter*framingCost);
     }
 }
