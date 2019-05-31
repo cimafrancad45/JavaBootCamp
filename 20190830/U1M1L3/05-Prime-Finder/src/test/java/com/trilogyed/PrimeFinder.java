@@ -9,6 +9,7 @@ public class PrimeFinder {
 
         System.out.println("Put in a number and I will list all the prime numbers leading up to that number: ");
         int userNum = Integer.parseInt(myScanner.nextLine());
+        int primeCheck;
 
         //0 and 1 are not prime numbers, but 2 is a prime Number. This ensures that 2 will always be printed out but not 1 or 0
 
@@ -18,10 +19,10 @@ public class PrimeFinder {
         }
 
         for (int i = 2 ; i <= userNum ; i++) {
-            boolean primeCalc = userNum%i;
-            if (primeCalc){
-
-            };
+            primeCalc = userNum%i;
+            if (primeCheck == 0){
+                System.out.println(i);
+            }
         }
     }
 }
