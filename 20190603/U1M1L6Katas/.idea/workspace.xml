@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d951113-35b7-47e8-80a3-0378dfe36a5b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../20190831/U1M1L5/U1M1L5Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190831/U1M1L5/U1M1L5Katas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190831/U1M1L5/U1M1L5Katas/src/test/java/com/company/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190831/U1M1L5/U1M1L5Katas/src/test/java/com/company/AppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="1d951113-35b7-47e8-80a3-0378dfe36a5b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,6 +140,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -292,7 +290,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="798" y="22" width="744" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -308,7 +306,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32577905" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.35276073" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
