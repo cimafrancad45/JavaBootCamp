@@ -67,24 +67,24 @@ public class App {
         return secondLargest;
     }
 
-    public static String[] swapFirstAndLast (String[] arr) {
+    public static String[] swapFirstAndLast(String[] arr) {
 
         int arraySize = arr.length;
         String firstVal = arr[0];
-        String lastVal = arr[arraySize-1];
+        String lastVal = arr[arraySize - 1];
         String[] swappedArray = new String[arraySize];
 
         swappedArray[0] = lastVal;
-        swappedArray[arraySize-1] = firstVal;
+        swappedArray[arraySize - 1] = firstVal;
 
-        for (int i = 1 ; i < arraySize ; i++ ) {
-            if (i != arraySize-1) {
+        for (int i = 1; i < arraySize; i++) {
+            if (i != arraySize - 1) {
                 swappedArray[i] = arr[i];
             }
 
         }
 
-    return swappedArray;
+        return swappedArray;
 
     }
 
@@ -103,7 +103,7 @@ public class App {
 
     }
 
-    public static String concatenateString(String[] arr){
+    public static String concatenateString(String[] arr) {
         String concatArr = "";
 
         for (String elements : arr) {
@@ -115,17 +115,19 @@ public class App {
     public static int[] everyThird(int[] arr) {
         int arraySize = arr.length;
 
-        int thirdsArraySize = arraySize/3;
+        int thirdsArraySize = arraySize / 3;
         System.out.println(thirdsArraySize);
-        int[] thirds= new int[thirdsArraySize];
+        int[] thirds = new int[thirdsArraySize];
 
         if (arraySize < 3) {
             return null;
         } else {
-            for (int i = 0; i < arraySize; i++) {
-                for (int q = 2; q < arraySize; q = q + 3) {
-                    int temp = arr[q];
-                    System.out.println("Third array" + thirds[i]);
+            for (int i = 2; i < thirdsArraySize; i = i + 3) {
+
+                int temp = arr[i];
+                for (int q = 0; q < thirdsArraySize; q++) {
+                    thirds[q] = temp;
+                    System.out.println("Third array" + thirds[q]);
                 }
             }
         }
@@ -137,13 +139,13 @@ public class App {
         //determine the length of the new array.
         int arrayLength = arr.length;
         int fiveLength = 0;
-        for (int i = 0 ; i < arr.length ; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] < 5) {
                 fiveLength += 1;
             }
         }
 
-        if (fiveLength == 0){
+        if (fiveLength == 0) {
             return null;
         } else {
             int[] fiveBelow = new int[fiveLength];
@@ -157,14 +159,14 @@ public class App {
 
             return fiveBelow;
         }
-        }
+    }
 
 
     public static void main(String[] args) {
         System.out.println("Using this as a test case.");
-        int[] testArray = {1,2,3,4,5,6,7,8,9,10};
-        String [] testArrayS = {"Ryu", "Ken", "Akuma"};
-        System.out.println(lessThanFive(testArray));
+        int[] testArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        String[] testArrayS = {"Ryu", "Ken", "Akuma"};
+        System.out.println(everyThird(testArray));
     }
 
 }
