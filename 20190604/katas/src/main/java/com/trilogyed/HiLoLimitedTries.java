@@ -16,7 +16,7 @@ public class HiLoLimitedTries {
         System.out.println("Try to guess a number 1-100. You have 7 attempts.");
 
 
-        do {
+        while (userGuesses < 7) {
             userGuess = Integer.parseInt(myScanner.nextLine());
             if (userGuess != randomNum && userGuess < randomNum) {
                 System.out.println("Wrong! Your number is too low.");
@@ -27,6 +27,9 @@ public class HiLoLimitedTries {
             } else if (userGuess == randomNum) {
                     System.out.println("Congratulations, you guessed the right number!");
             }
-        } while (userGuess != randomNum);
+        }
+        if (userGuesses == 7) {
+            System.out.println("Too bad! You used up all your tries.");
+        }
     }
 }
