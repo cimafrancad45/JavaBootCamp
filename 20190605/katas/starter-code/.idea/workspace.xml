@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7240e3fe-4088-43e3-ac8c-a02b3b114286" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/U1M2L2Katas/src/main/java/com/company/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/U1M2L2Katas/src/main/java/com/company/CoffeeMaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/U1M2L2Katas/src/main/java/com/company/ComputerMouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/U1M2L2Katas/src/main/java/com/company/Microwave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/U1M2L2Katas/src/main/java/com/company/Radio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/U1M2L2Katas/src/main/java/com/company/TV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../20190603/U1M1L6Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../20190603/U1M1L6Katas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../20190604/katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../20190604/katas/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Buzzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/DigitalClock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/U1M2L2Katas/src/test/java/com/company/ComputerMouseTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -162,6 +157,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,7 +239,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,6 +246,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
@@ -393,7 +389,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2671141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2751678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -500,7 +496,7 @@
     <entry file="file://$PROJECT_DIR$/U1M2L2Katas/src/test/java/com/company/ComputerMouseTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>

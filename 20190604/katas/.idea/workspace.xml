@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce8c94b3-6997-41a1-b3be-56537dc03d1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../20190605/katas/starter-code/U1M2L2Katas/src/main/java/com/company/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190605/katas/starter-code/U1M2L2Katas/src/main/java/com/company/CoffeeMaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190605/katas/starter-code/U1M2L2Katas/src/main/java/com/company/ComputerMouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190605/katas/starter-code/U1M2L2Katas/src/main/java/com/company/Microwave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190605/katas/starter-code/U1M2L2Katas/src/main/java/com/company/Radio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190605/katas/starter-code/U1M2L2Katas/src/main/java/com/company/TV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trilogyed/FortuneCookie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Buzzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/DigitalClock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190603/U1M1L6Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190603/U1M1L6Katas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190605/katas/starter-code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190605/katas/starter-code/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/OneShotHiLo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="255">
               <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/ThreeCardMonte.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="408">
               <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -74,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/NumberGuesserWithACounter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -82,6 +81,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/FortuneCookie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="86" selection-start-line="17" selection-start-column="86" selection-end-line="17" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -101,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/KeepGuessing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="272">
               <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -145,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/NumberGuesserWithACounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/KeepGuessing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/HiLoLimitedTries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/FortuneCookie.java" />
       </list>
     </option>
   </component>
@@ -153,15 +162,6 @@
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -177,7 +177,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,10 +184,42 @@
               <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
               <item name="katas" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="katas" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="katas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="katas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="katas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="katas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="trilogyed" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,11 +242,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NumberGuesserWithACounter">
+  <component name="RunManager" selected="Application.FortuneCookie">
     <configuration name="Dice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.trilogyed.Dice" />
+      <module name="DarylCimafrancaU1M2L1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trilogyed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FortuneCookie" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.FortuneCookie" />
       <module name="DarylCimafrancaU1M2L1" />
       <extension name="coverage">
         <pattern>
@@ -267,35 +311,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreeCardMonte" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.ThreeCardMonte" />
-      <module name="DarylCimafrancaU1M2L1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Dice" />
       <item itemvalue="Application.HiLoLimitedTries" />
       <item itemvalue="Application.KeepGuessing" />
       <item itemvalue="Application.NumberGuesserWithACounter" />
-      <item itemvalue="Application.ThreeCardMonte" />
+      <item itemvalue="Application.FortuneCookie" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FortuneCookie" />
         <item itemvalue="Application.NumberGuesserWithACounter" />
         <item itemvalue="Application.KeepGuessing" />
         <item itemvalue="Application.Dice" />
         <item itemvalue="Application.HiLoLimitedTries" />
-        <item itemvalue="Application.ThreeCardMonte" />
       </list>
     </recent_temporary>
   </component>
@@ -314,8 +343,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27114093" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2751678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -324,7 +354,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26203966" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26203966" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -437,7 +467,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/OneShotHiLo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="255">
           <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -447,18 +477,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/ThreeCardMonte.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="408">
           <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/HiLoLimitedTries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -467,7 +487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/KeepGuessing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="272">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -489,6 +509,23 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/HiLoLimitedTries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/FortuneCookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="86" selection-start-line="17" selection-start-column="86" selection-end-line="17" selection-end-column="86" />
         </state>
       </provider>
     </entry>
