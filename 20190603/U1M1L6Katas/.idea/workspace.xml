@@ -2,9 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d951113-35b7-47e8-80a3-0378dfe36a5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Buzzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/DigitalClock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190607/U1M2L3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190604/katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190604/katas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../20190605/katas/starter-code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190605/katas/starter-code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/UserIO.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/src/main/java/com/company/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/src/main/java/com/company/Input.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/src/main/java/com/company/interfaces/UserIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/target/classes/META-INF/UserIO.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/U1M2L5Katas.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/AnalogClock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Buzzer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/DigitalClock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Square.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Triangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/interfaces/Alarm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/interfaces/Clock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/interfaces/Shape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/test/java/com/company/AllKatasTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
