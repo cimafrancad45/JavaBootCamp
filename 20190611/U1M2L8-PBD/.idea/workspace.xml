@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08e471b9-5b92-41e6-aee9-c9004d43e459" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DarylC/BabyNim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DarylC/Nim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190610/U1M1Summative/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M1Summative/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M2L6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L7/katas/starter-code/U1M2L7Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M2L7/katas/starter-code/U1M2L7Katas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L7/shapes-perimeters/starter-code/ShapesPerimeters/ShapesPerimeters.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,8 +69,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="25" />
-    <option name="y" value="42" />
+    <option name="x" value="900" />
+    <option name="y" value="11" />
     <option name="width" value="1055" />
     <option name="height" value="980" />
   </component>
@@ -88,6 +83,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -152,7 +148,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
