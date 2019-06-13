@@ -2,116 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce8c94b3-6997-41a1-b3be-56537dc03d1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../20190607/U1M2L5PBD/src/main/java/AddingValuesInALoop55.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190607/U1M2L5PBD/src/main/java/DiceDoubles50.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190607/U1M2L5PBD/src/main/java/RightTriangleChecker61.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190607/U1M2L5PBD/src/main/java/SafeSquareRoot60.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190607/U1M2L5PBD/src/main/java/ShorterDoubleDice58.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190607/U1M2L5PBD/src/main/java/ThreeCardMonte47.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190603/U1M1L6Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190603/U1M1L6Katas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/20190604.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/ALittleQuiz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/Dice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/FortuneCookie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/HiLoLimitedTries.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/KeepGuessing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/ModulusAnimation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/NumberGuesserWithACounter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/OneShotHiLo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/SpaceBoxing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/katas/src/main/java/com/trilogyed/ThreeCardMonte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/Calculator.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/src/main/java/com/company/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorRefactored/starter-code/Calculator/src/test/java/com/company/CalculatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pictures - Shortcut.lnk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/.idea/U1M2L2Katas.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/ClassesPractice.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/U1M2L2Katas.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/main/java/com/company/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/main/java/com/company/CoffeeMaker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/main/java/com/company/ComputerMouse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/main/java/com/company/Microwave.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/main/java/com/company/Radio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/main/java/com/company/TV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/.idea/com.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/company/AllKatasTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/company/CarTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/company/CoffeeMakerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/company/ComputerMouseTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/company/MicrowaveTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/company/RadioTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/src/test/java/com/company/TVTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/target/classes/test/U1M2L2Katas/com/.idea/com.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/target/classes/test/U1M2L2Katas/com/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/target/classes/test/U1M2L2Katas/com/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/U1M2L2Katas/target/classes/test/U1M2L2Katas/com/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../katas/starter-code/UMLDiagrams.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/UserIO.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/src/main/java/com/company/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/src/main/java/com/company/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/src/main/java/com/company/interfaces/UserIO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/implementation-userIO-interface/starter-code/UserIO/target/classes/META-INF/UserIO.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/U1M2L5Katas.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/AnalogClock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Buzzer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Circle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/DigitalClock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Square.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/interfaces/Alarm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/interfaces/Clock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/main/java/com/company/interfaces/Shape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L5/katas/starter-code/U1M2L5Katas/src/test/java/com/company/AllKatasTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190614/U1M3L5PBDDarylCimafranca/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190614/U1M3L5PBDDarylCimafranca/src/main/java/com/trilogyed/BasicArrayList1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190614/U1M3L5PBDDarylCimafranca/src/main/java/com/trilogyed/BasicArrayLists0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190613/U1M3L3Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190613/U1M3L3Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190614/TelevisionStreams/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190614/TelevisionStreams/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -126,13 +23,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/production/DarylCimafrancaU1M2L1/com/trilogyed/FortuneCookie.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/20190604.iml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -140,14 +38,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/out/production/DarylCimafrancaU1M2L1/com/trilogyed/Dice.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#0#669#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -247,7 +142,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,48 +152,40 @@
             <path>
               <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
               <item name="DarylCimafrancaU1M2L1PBD" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
               <item name="DarylCimafrancaU1M2L1PBD" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
               <item name="DarylCimafrancaU1M2L1PBD" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="DarylCimafrancaU1M2L1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
               <item name="DarylCimafrancaU1M2L1PBD" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="DarylCimafrancaU1M2L1" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DarylCimafrancaU1M2L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DarylCimafrancaU1M2L1PBD" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="DarylCimafrancaU1M2L1" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="trilogyed" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -316,11 +202,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NumberGuesserWithACounter">
-    <configuration name="Dice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.Dice" />
+  <component name="RunManager" selected="Application.ALittleQuiz">
+    <configuration name="ALittleQuiz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.ALittleQuiz" />
       <module name="DarylCimafrancaU1M2L1" />
       <extension name="coverage">
         <pattern>
@@ -359,6 +243,8 @@
       </method>
     </configuration>
     <configuration name="NumberGuesserWithACounter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.trilogyed.NumberGuesserWithACounter" />
       <module name="DarylCimafrancaU1M2L1" />
       <extension name="coverage">
@@ -384,8 +270,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Dice" />
+      <item itemvalue="Application.ALittleQuiz" />
       <item itemvalue="Application.FortuneCookie" />
       <item itemvalue="Application.KeepGuessing" />
       <item itemvalue="Application.NumberGuesserWithACounter" />
@@ -393,11 +326,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ALittleQuiz" />
         <item itemvalue="Application.NumberGuesserWithACounter" />
         <item itemvalue="Application.ThreeCardMonte" />
         <item itemvalue="Application.FortuneCookie" />
         <item itemvalue="Application.KeepGuessing" />
-        <item itemvalue="Application.Dice" />
       </list>
     </recent_temporary>
   </component>
@@ -418,7 +351,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1671141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17158177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -427,7 +360,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28328612" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28288543" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -445,34 +378,6 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26203966" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myShow1" value="true" />
@@ -514,9 +419,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/SpaceBoxing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -588,8 +490,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/DarylCimafrancaU1M2L1/com/trilogyed/FortuneCookie.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="34">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/DarylCimafrancaU1M2L1/com/trilogyed/ALittleQuiz.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/DarylCimafrancaU1M2L1/com/trilogyed/Dice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -626,18 +538,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/DarylCimafrancaU1M2L1/com/trilogyed/ALittleQuiz.class">
+    <entry file="file://$PROJECT_DIR$/20190604.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/DarylCimafrancaU1M2L1/com/trilogyed/Dice.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -679,7 +584,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -696,7 +601,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
