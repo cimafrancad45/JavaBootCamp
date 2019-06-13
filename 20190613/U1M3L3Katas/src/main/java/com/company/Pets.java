@@ -2,7 +2,6 @@ package com.company;
 
 import java.io.*;
 import java.util.Arrays;
-
 import java.util.Scanner;
 
 
@@ -16,9 +15,16 @@ public class Pets {
         return petsList[index];
     }
 
-    public static int choosePet() throws NumberFormatException {
-        System.out.format("Here's a list of all the pets: %s: ", Arrays.asList(petsList));
-        return Integer.parseInt(scan.nextLine());
+    public static int choosePet(){
+        do {
+            try {
+                System.out.format("Here's a list of all the pets: %s: ", Arrays.asList(petsList));
+                Integer.parseInt(scan.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println("Please enter a valid character.");}
+            } while (Integer.parseInt(scan.nextLine()) < 0 || Integer.parseInt(scan.nextLine()) >= 5);
+                return Integer.parseInt(scan.nextLine());
+
     }
 
     public static void writePetToFile(String pet) throws  IOException  {
@@ -26,6 +32,7 @@ public class Pets {
         out.println(pet);
         out.flush();
         out.close();
+
     }
 
     public static void readPetsFromFile() throws FileNotFoundException {
