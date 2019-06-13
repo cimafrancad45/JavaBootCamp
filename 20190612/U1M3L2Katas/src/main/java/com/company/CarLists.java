@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,7 +24,7 @@ public class CarLists {
         List<Car> toyotaList = new ArrayList<>();
         List<Car> fordList = new ArrayList<>();
         List<Car> hondaList = new ArrayList<>();
-
+        List<Map<String, String>> carList = new ArrayList<>();
 
         toyotaList.add(camry);
         toyotaList.add(corolla);
@@ -36,6 +37,13 @@ public class CarLists {
         hondaList.add(accord);
         hondaList.add(civic);
         hondaList.add(fit);
+
+         Map carMap= new HashMap<>();
+         List<carMap> carList = new ArrayList<>();
+
+         carMap.add(toyotaList);
+
+
 
 
     }
