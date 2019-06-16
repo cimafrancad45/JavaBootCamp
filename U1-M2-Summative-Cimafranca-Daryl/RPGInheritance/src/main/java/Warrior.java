@@ -20,7 +20,11 @@ public class Warrior extends Character {
     }
 
     public String shieldBlock(int damage) {
+        if (shieldStrength > 0) {
         shieldStrength -= damage;
         return "Attack blocked with shield! " + damage + " damage blocked!";
+        } else {
+            return decreaseHealth(damage);
+        }
     }
 }

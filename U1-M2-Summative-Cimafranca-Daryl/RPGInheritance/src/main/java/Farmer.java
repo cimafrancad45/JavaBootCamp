@@ -1,4 +1,5 @@
 public class Farmer extends Character {
+    private int vegetables = 0;
 
 
     public Farmer() {
@@ -11,6 +12,19 @@ public class Farmer extends Character {
 
     public String plow(){
         return this.getName() + " plows the fields!";
+    }
+
+    public String harvest(int amount) {
+        vegetables =+ amount;
+        return this.getName() + "harvests the crops! Get one vegetable!";
+    }
+
+    public int getVegetables() {
+        return vegetables;
+    }
+
+    public void setVegetables(int vegetables) {
+        this.vegetables = vegetables;
     }
 
 }
