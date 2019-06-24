@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: Echo Service
+  description: A simple service that echos your input back to you.
+  version: 0.0.1
+servers: 
+    - url: http://localhost:8080
+      description: Local dev server
+
+paths:
+  /echo/{input}:
+    get:
+      summary: Echos your input back to you
+      description: A simple demo service that simply echos your input back to you.
+      parameters: 
+        - name: input
+          in: path
+          required: true
+          description: The value you would like to have echoed back to you.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The string the you sent to the service.
+          content:
+            application/json:
+              schema:
+                type: string

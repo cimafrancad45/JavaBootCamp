@@ -2,36 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9693e4-6fce-4cf4-9ba7-c623e28078db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/.idea/CalculatorRefactored.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trilogyed/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/src/main/java/com/trilogyed/ConverterApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/src/main/java/com/trilogyed/ConverterIf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/src/main/java/com/trilogyed/ConverterSwitch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ConverterInterface/src/main/java/com/trilogyed/interfaces/Converter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamShop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RPGInheritance/src/main/java/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RPGInheritance/src/main/java/Constable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RPGInheritance/src/main/java/Farmer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RPGInheritance/src/main/java/RPG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RPGInheritance/src/main/java/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190604/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190604/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/starter-code/Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/starter-code/Calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/starter-code/Calculator/src/test/java/com/company/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/starter-code/Calculator/src/test/java/com/company/CalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190614/U1M3L5PBDDarylCimafranca/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190614/U1M3L5PBDDarylCimafranca/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../U1M1Summative/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1M1Summative/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../U1M1Summative/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1M1Summative/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../U1M1Summative/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1M1Summative/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190621/activities/MotorcycleDemo/src/main/java/com/example/MotorcycleDemo/controller/MotorcycleDemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190621/activities/MotorcycleDemo/src/main/java/com/example/MotorcycleDemo/model/Motorcycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190621/echo-range-service2/src/main/java/com/example/echorangeservice2/controller/ControllerExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../20190621/moto-inventory-Daryl/src/main/java/com/example/motoinventoryDaryl/controller/ControllerExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M4-Summative-Cimafranca-Daryl/src/main/java/com/example/U1M4SummativeCimafrancaDaryl/controllers/U1M4Controllers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M4-Summative-Cimafranca-Daryl/src/main/java/com/example/U1M4SummativeCimafrancaDaryl/models/MagicEightBall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M4-Summative-Cimafranca-Daryl/src/main/java/com/example/U1M4SummativeCimafrancaDaryl/models/Words.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trilogyed/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trilogyed/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerComposition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerComposition/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerComposition/src/main/java/com/trilogyed/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerComposition/src/main/java/com/trilogyed/Customer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,7 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -60,11 +40,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding>
                 <element signature="e#83#84#0" expanded="true" />
                 <element signature="e#109#110#0" expanded="true" />
@@ -76,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="85">
+              <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -98,8 +78,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/Calculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/Calculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/App.java" />
       </list>
     </option>
@@ -119,7 +99,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="682" />
+    <option name="x" value="681" />
     <option name="y" value="20" />
     <option name="width" value="1055" />
     <option name="height" value="980" />
@@ -130,6 +110,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,10 +159,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -216,6 +197,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -234,7 +220,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14209116" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14410187" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -273,21 +259,21 @@
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="e#83#84#0" expanded="true" />
             <element signature="e#109#110#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>

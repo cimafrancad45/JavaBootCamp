@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: 'Month Converter'
+  description: An app that gets the day that the number converts to.
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:8080/'
+    description: Local dev test
+
+paths:
+  '/day/{dayNumber}':
+    get:
+      summary: The number that gets converted into a month.
+      parameters:
+        - name: dayNumber
+          in: path
+          required: true
+          description: user's day input
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+            maximum: 12
+      responses:
+        '200':
+          description: Month conversion.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    example: 1
+                  name:
+                    type: string
+                    example: January
+        '400':
+          description: 'Invalid month number!'
+        
+          
+            

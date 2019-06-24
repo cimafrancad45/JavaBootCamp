@@ -1,0 +1,91 @@
+openapi: 3.0.0
+info:
+  title: U1-M4-Summative
+  description: >-
+    A simple API that has three functions. A quote getter, a word getter, and a
+    magic-8-ball game.
+  version: 0.0.1
+  
+servers:
+  - url: 'http://localhost:8080'
+    description: Local Dev Host
+    
+paths:
+  /quote:
+    get:
+      summary: Gets a random quote and prints it out into the client's browser
+      responses:
+        '200':
+          description: Quote get!
+          content:
+            applications/json:
+              schema:
+                $ref: '#/components/schemas/quotes'
+        default:
+          description: Default error sample response
+          
+  /word:
+    get:
+      summary: Gets a word with the definition.
+      responses:
+        '200':
+          description: Word get!
+          content:
+            applications/json:
+              schema:
+                $ref: '#/components/schemas/words'
+        default:
+          description: Default error sample response
+          
+  /magic8ball/{question}:
+    post:
+      summary: 'Input a question and the magic 8 ball responds with a randomly generated answer'
+      parameters: 
+        - name: question
+          in: path
+          required: true
+          schema: 
+            type: string
+      responses: 
+       '201':
+          description: Question recieved! Answering...
+          content:
+              applications/json:
+                schema:
+                  $ref: '#/components/schemas/magic8ball'
+      
+            
+components:
+  schemas:
+    quotes:
+      type: object
+      properties:
+        quote:
+          type: string
+        author:
+          type: string
+      example:
+        quote: "If there is a fork in the road, take it"
+        author: "Yogi Berra"
+          
+    words:
+      type: object
+      properties:
+        word:
+          type: string
+        definition:
+          type: string
+      example:
+        word: "Relinquish"
+        definition: "To let go."
+          
+    magic8ball:
+      type: object
+      properties:
+        question:
+          type: string
+        answer:
+          type: string
+      example:
+        question: "Will you be sent to track 2 in this course?"
+        answer: "Very likely."
