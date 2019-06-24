@@ -94,7 +94,8 @@ public class U1M4Controller {
         Words word10 = new Words();
 
         Random random = new Random();
-        int randomNum = random.nextInt(10);
+
+
 
         List<Words> wordList = new ArrayList<>();
 
@@ -139,10 +140,10 @@ public class U1M4Controller {
         wordList.add(word9);
         wordList.add(word10);
 
-        Words randomWordDef1 = wordList.get(randomNum);
-        Words randomWordDef2 = wordList.get(randomNum);
+        Words randomWordDef1 = wordList.get(random.nextInt(10));
+        Words randomWordDef2 = wordList.get(random.nextInt(10));
 
-        String randomWord = randomWordDef1.getDefinition();
+        String randomWord = randomWordDef1.getWord();
         String randomDef = randomWordDef2.getDefinition();
 
         Words randomWordDef = new Words();
