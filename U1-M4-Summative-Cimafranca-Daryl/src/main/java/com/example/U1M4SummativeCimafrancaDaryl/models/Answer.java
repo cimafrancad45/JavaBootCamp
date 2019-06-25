@@ -1,6 +1,6 @@
 package com.example.U1M4SummativeCimafrancaDaryl.models;
 
-public class MagicEightBall {
+public class Answer {
     private String question;
     private String answer;
 

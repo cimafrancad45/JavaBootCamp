@@ -1,5 +1,6 @@
 package com.example.U1M4SummativeCimafrancaDaryl.controllers;
 
+import com.example.U1M4SummativeCimafrancaDaryl.models.Answer;
 import com.example.U1M4SummativeCimafrancaDaryl.models.Quotes;
 import com.example.U1M4SummativeCimafrancaDaryl.models.Words;
 import org.springframework.http.HttpStatus;
@@ -52,8 +53,8 @@ public class U1M4Controller {
         quote6.setQuote("You must defeat my Shoryuken to stand a chance.");
         quote6.setAuthor("Ryu");
 
-        quote7.setQuote("NNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!");
-        quote7.setAuthor("Darth Vader");
+        quote7.setQuote("I will meditate then destroy you!");
+        quote7.setAuthor("Dhalsim");
 
         quote8.setQuote("I did not hit her! It's not true! This is bull$%&#! I did not hit her! I did not!... Oh hi, Mark.");
         quote8.setAuthor("Tommy Wiseau");
@@ -151,5 +152,38 @@ public class U1M4Controller {
         randomWordDef.setDefinition(randomDef);
 
         return randomWordDef;
+    }
+
+    @RequestMapping(value = "/magic/", method = RequestMethod.POST)
+    @ResponseStatus(value = HttpStatus.ACCEPTED)
+    public Answer getAnswer(@RequestBody Answer answer){
+        Random random = new Random();
+        Answer fortune1 = new Answer();
+        Answer fortune2 = new Answer();
+        Answer fortune3 = new Answer();
+        Answer fortune4 = new Answer();
+        Answer fortune5 = new Answer();
+        Answer fortune6 = new Answer();
+
+        List<Answer> fortuneList = new ArrayList<>();
+
+
+        fortune1.setAnswer("Signs point yes.");
+        fortuneList.add(fortune1);
+        fortune2.setAnswer("I'm guessing no.");
+        fortuneList.add(fortune2);
+        fortune3.setAnswer("Maybe.");
+        fortuneList.add(fortune3);
+        fortune4.setAnswer("Ask again later.");
+        fortuneList.add(fortune4);
+        fortune5.setAnswer("Most likely.");
+        fortuneList.add(fortune5);
+        fortune6.setAnswer("Highly unlikely.");
+        fortuneList.add(fortune6);
+
+        Answer randomFortune = fortuneList.get(random.nextInt(6));
+        randomFortune.setQuestion(answer.getQuestion());
+
+        return randomFortune;
     }
 }
