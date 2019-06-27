@@ -1,6 +1,7 @@
 package com.example.motoinventoryservice.model;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class Motorcycle {
@@ -18,6 +19,7 @@ public class Motorcycle {
     private String year;
     @NotEmpty(message = "You must supply a value for color.")
     private String color;
+
 
     public int getId() {
         return id;

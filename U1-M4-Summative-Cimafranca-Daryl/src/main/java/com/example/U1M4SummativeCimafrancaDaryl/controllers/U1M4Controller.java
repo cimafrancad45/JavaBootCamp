@@ -10,7 +10,7 @@ import java.util.*;
 
 @RestController
 public class U1M4Controller {
-    @RequestMapping(value = "/quote/", method = RequestMethod.GET)
+    @RequestMapping(value = "/quote", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
     public Quotes getQuote(){
         //Initializing in-memory data storage for the quotes
@@ -79,7 +79,7 @@ public class U1M4Controller {
         return quotesList.get(randomNum);
     }
 
-    @RequestMapping(value = "/word/", method = RequestMethod.GET)
+    @RequestMapping(value = "/word", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
     public Words getWord() {
         //initializing in-memory words
@@ -141,22 +141,14 @@ public class U1M4Controller {
         wordList.add(word9);
         wordList.add(word10);
 
-        Words randomWordDef1 = wordList.get(random.nextInt(10));
-        Words randomWordDef2 = wordList.get(random.nextInt(10));
-
-        String randomWord = randomWordDef1.getWord();
-        String randomDef = randomWordDef2.getDefinition();
-
-        Words randomWordDef = new Words();
-        randomWordDef.setWord(randomWord);
-        randomWordDef.setDefinition(randomDef);
+        Words randomWordDef = wordList.get(random.nextInt(10));
 
         return randomWordDef;
     }
 
     @RequestMapping(value = "/magic/", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.ACCEPTED)
-    public Answer getAnswer(@RequestBody Answer answer){
+    public Answer getAnswer(@RequestBody Answer question){
         Random random = new Random();
         Answer fortune1 = new Answer();
         Answer fortune2 = new Answer();
@@ -182,7 +174,7 @@ public class U1M4Controller {
         fortuneList.add(fortune6);
 
         Answer randomFortune = fortuneList.get(random.nextInt(6));
-        randomFortune.setQuestion(answer.getQuestion());
+        randomFortune.setQuestion(question.getQuestion());
 
         return randomFortune;
     }
