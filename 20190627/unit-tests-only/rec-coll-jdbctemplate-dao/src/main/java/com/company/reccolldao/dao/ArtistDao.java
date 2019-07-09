@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface ArtistDao {
 
+
+
     Artist addArtist(Artist artist);
 
     Artist getArtist(int id);

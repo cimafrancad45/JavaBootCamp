@@ -13,29 +13,79 @@ import java.util.List;
 
 @Repository
 public class LabelDaoJdbcTemplateImpl implements LabelDao {
+    private JdbcTemplate jdbcTemplate;
+    //statements
+    private static final String INSERT_LABEL_SQL =
+            "insert into label (name, website) values (?, ?)";
+    private static final String SELECT_LABEL_SQL =
+            "select * from label where label_id = ?";
+    private static final String SELECT_ALL_LABELS_SQL =
+            "select * from label";
+    private static final String UPDATE_LABEL_SQL =
+            "update label set name = ?, website = ?";
+    private static final String DELETE_LABEL_SQL =
+            "delete from label where label_id = ?";
+
+
+
+    private Label mapToLabel(ResultSet rs, int rowNum) throws SQLException{
+        Label label = new Label();
+        label.setId(rs.getInt("label_id"));
+        label.setName(rs.getString("name"));
+        label.setWebsite(rs.getString("website"));
+
+
+        return label;
+    }
+
+
+
+    @Autowired
+    public LabelDaoJdbcTemplateImpl(JdbcTemplate newJdbcTemplate){
+        this.jdbcTemplate = newJdbcTemplate;
+    }
+
+
 
     @Override
+    @Transactional
     public Label addLabel(Label label) {
-        return null;
+        jdbcTemplate.update(INSERT_LABEL_SQL,
+                label.getName(),
+                label.getWebsite());
+
+        int id = jdbcTemplate.queryForObject("select last_insert_id()", Integer.class);
+
+        label.setId(id);
+
+        return label;
     }
 
     @Override
     public Label getLabel(int id) {
-        return null;
+        try {
+            return jdbcTemplate.queryForObject(SELECT_LABEL_SQL, this::mapToLabel, id);
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
 
     @Override
     public List<Label> getAllLabels() {
-        return null;
+        return jdbcTemplate.query(SELECT_ALL_LABELS_SQL, this::mapToLabel);
     }
 
     @Override
     public void updateLabel(Label label) {
+        jdbcTemplate.update(UPDATE_LABEL_SQL,
+                label.getName(),
+                label.getWebsite());
 
     }
 
     @Override
     public void deleteLabel(int id) {
+        jdbcTemplate.update(DELETE_LABEL_SQL, id);
 
     }
 }
