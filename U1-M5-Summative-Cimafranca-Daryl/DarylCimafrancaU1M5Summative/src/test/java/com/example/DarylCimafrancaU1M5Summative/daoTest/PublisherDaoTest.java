@@ -58,6 +58,7 @@ public class PublisherDaoTest {
         publisher.setPostalCode("10018");
         publisher.setPhone("(212) 832-3753");
         publisher.setEmail("Kensington@kensingtonbooks.com.");
+
         publisher = publisherDao.addPublisher(publisher);
 
         Publisher publisher2 = publisherDao.getPublisher(publisher.getPublisherId());

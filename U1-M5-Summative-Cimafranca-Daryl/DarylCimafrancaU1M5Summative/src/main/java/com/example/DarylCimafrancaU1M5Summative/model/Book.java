@@ -85,7 +85,7 @@ public class Book {
                 Objects.equals(getAuthorId(), book.getAuthorId()) &&
                 Objects.equals(getTitle(), book.getTitle()) &&
                 Objects.equals(getPublisherId(), book.getPublisherId());
-        
+
     }
 
     @Override

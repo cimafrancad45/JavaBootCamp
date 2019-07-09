@@ -38,6 +38,7 @@ public class AuthorDaoJdbcTemplateImpl implements AuthorDao {
         Author author = new Author();
         author.setAuthorId(rs.getInt("author_id"));
         author.setFirstName(rs.getString("first_name"));
+        author.setLastName(rs.getString("last_name"));
         author.setStreet(rs.getString("street"));
         author.setCity(rs.getString("city"));
         author.setState(rs.getString("state"));
