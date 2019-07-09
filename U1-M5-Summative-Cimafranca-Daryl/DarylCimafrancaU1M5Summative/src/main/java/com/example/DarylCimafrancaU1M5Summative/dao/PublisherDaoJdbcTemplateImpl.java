@@ -2,6 +2,7 @@ package com.example.DarylCimafrancaU1M5Summative.dao;
 
 import com.example.DarylCimafrancaU1M5Summative.model.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,7 +23,7 @@ public class PublisherDaoJdbcTemplateImpl implements PublisherDao {
     private static final String SELECT_ALL_PUBLISHER_SQL =
             "select * from publisher";
     private static final String UPDATE_PUBLISHER_SQL =
-            "update publisher set name = ?, street = ?, city = ?, state = ?, postal_code = ?, phone = ?, email = ?";
+            "update publisher set name = ?, street = ?, city = ?, state = ?, postal_code = ?, phone = ?, email = ? where publisher_id = ?";
     private static final String DELETE_PUBLISHER =
             "delete from publisher where publisher_id = ?";
 
@@ -40,6 +41,8 @@ public class PublisherDaoJdbcTemplateImpl implements PublisherDao {
         publisher.setState(rs.getString("state"));
         publisher.setPostalCode(rs.getString("postal_code"));
         publisher.setPhone(rs.getString("phone"));
+        publisher.setEmail(rs.getString("email"));
+
 
         return publisher;
     }
@@ -69,7 +72,11 @@ public class PublisherDaoJdbcTemplateImpl implements PublisherDao {
 
     @Override
     public Publisher getPublisher(int id){
-        return jdbcTemplate.queryForObject(SELECT_PUBLISHER_SQL, this::mapRowToPublisher, id);
+        try{
+            return jdbcTemplate.queryForObject(SELECT_PUBLISHER_SQL, this::mapRowToPublisher, id);
+        } catch(EmptyResultDataAccessException e) {
+            return null;
+        }
     }
 
     @Override
@@ -86,7 +93,8 @@ public class PublisherDaoJdbcTemplateImpl implements PublisherDao {
                 publisher.getState(),
                 publisher.getPostalCode(),
                 publisher.getPhone(),
-                publisher.getEmail()
+                publisher.getEmail(),
+                publisher.getPublisherId()
         );
     }
 

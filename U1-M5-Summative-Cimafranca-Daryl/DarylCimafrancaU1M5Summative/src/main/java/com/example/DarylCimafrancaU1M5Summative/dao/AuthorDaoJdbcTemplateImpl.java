@@ -24,7 +24,7 @@ public class AuthorDaoJdbcTemplateImpl implements AuthorDao {
     private static final String SELECT_ALL_AUTHORS_SQL =
             "select * from author";
     private static final String UPDATE_AUTHOR_SQL =
-            "update author set first_name = ?, last_name = ?, street = ?, city = ?, state = ?, postal_code = ?, phone = ?, email = ?";
+            "update author set first_name = ?, last_name = ?, street = ?, city = ?, state = ?, postal_code = ?, phone = ?, email = ? where author_id = ?";
     private static final String DELETE_AUTHOR =
             "delete from author where author_id = ?";
 
@@ -95,7 +95,8 @@ public class AuthorDaoJdbcTemplateImpl implements AuthorDao {
                 author.getState(),
                 author.getPostalCode(),
                 author.getPhone(),
-                author.getEmail());
+                author.getEmail(),
+                author.getAuthorId());
     }
 
     @Override

@@ -63,7 +63,7 @@ public class PublisherDaoTest {
 
         Publisher publisher2 = publisherDao.getPublisher(publisher.getPublisherId());
 
-        assertEquals(publisher, publisher2);
+        assertEquals(publisher2, publisher);
 
 
         publisherDao.deletePublisher(publisher.getPublisherId());

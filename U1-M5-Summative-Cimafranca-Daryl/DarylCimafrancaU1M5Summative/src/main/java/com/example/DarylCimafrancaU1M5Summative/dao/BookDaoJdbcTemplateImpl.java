@@ -26,7 +26,7 @@ public class BookDaoJdbcTemplateImpl implements BookDao {
             "select * from book";
 
     private static final String UPDATE_BOOK_SQL =
-            "update book set";
+            "update book set isbn = = ?, publish_date = ?, author_id = ?, title = ?, publisher_id = ?, price = ? where book_id = ?";
 
     private static final String DELETE_BOOK =
             "delete from book where book_id = ?";
