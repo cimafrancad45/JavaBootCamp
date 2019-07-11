@@ -7,11 +7,11 @@ public class Customer {
     private String lastName;
     private String email;
     private String phoneNumber;
-    private Map<String, String> shippingAddress;
-    private Map<String, String> billingAddress;
+    private Address shippingAddress;
+    private Address billingAddress;
     private boolean rewardsMember;
 
-    public Customer(String firstName, String lastName, String email, String phoneNumber, Map<String, String> shippingAddress, Map<String, String> billingAddress, boolean rewardsMember) {
+    public Customer(String firstName, String lastName, String email, String phoneNumber, Address shippingAddress, Address billingAddress, boolean rewardsMember) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -53,19 +53,19 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
-    public Map<String, String> getShippingAddress() {
+    public Address getShippingAddress() {
         return shippingAddress;
     }
 
-    public void setShippingAddress(Map<String, String> shippingAddress) {
+    public void setShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
 
-    public Map<String, String> getBillingAddress() {
+    public Address getBillingAddress() {
         return billingAddress;
     }
 
-    public void setBillingAddress(Map<String, String> billingAddress) {
+    public void setBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
     }
 

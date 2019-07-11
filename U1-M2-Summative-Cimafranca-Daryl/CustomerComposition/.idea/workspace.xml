@@ -2,8 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3444928c-0eb9-4e9e-869a-d717a50a5058" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/ConsoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/ConsoleDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/GameDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/GameDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/InvoiceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/InvoiceDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/ProcessingFeeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/TShirtDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/TaxesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/TshirtDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dto/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dto/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dto/Invoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dto/TShirt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/service/ServiceLayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/viewmodel/InvoiceViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/ConsoleDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/GameDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/InvoiceDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/TShirtDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/service/ServiceLayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trilogyed/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculatorObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CalculatorObject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IceCreamClassDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IceCreamClassDesign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamShop.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,37 +56,66 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="-395">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
-                <element signature="e#354#355#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-                <element signature="e#436#437#0" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#544#545#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-                <element signature="e#632#633#0" expanded="true" />
-                <element signature="e#664#665#0" expanded="true" />
-                <element signature="e#692#693#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
-                <element signature="e#940#941#0" expanded="true" />
-                <element signature="e#995#996#0" expanded="true" />
-                <element signature="e#1033#1034#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1162#1163#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-                <element signature="e#1253#1254#0" expanded="true" />
-                <element signature="e#1326#1327#0" expanded="true" />
-                <element signature="e#1378#1379#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
-                <element signature="e#1513#1514#0" expanded="true" />
-                <element signature="e#1563#1564#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#858#859#0" expanded="true" />
+                <element signature="e#900#901#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
+                <element signature="e#1014#1015#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1086#1087#0" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#1190#1191#0" expanded="true" />
+                <element signature="e#1228#1229#0" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
+                <element signature="e#1316#1317#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
+                <element signature="e#1405#1406#0" expanded="true" />
+                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1506#1507#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1602#1603#0" expanded="true" />
+                <element signature="e#1639#1640#0" expanded="true" />
+                <element signature="e#1700#1701#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
+                <element signature="e#1792#1793#0" expanded="true" />
+                <element signature="e#1828#1829#0" expanded="true" />
+                <element signature="e#1887#1888#0" expanded="true" />
+                <element signature="e#1937#1938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/Address.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding>
+                <element signature="e#240#241#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#383#384#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#587#588#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#689#690#0" expanded="true" />
+                <element signature="e#723#724#0" expanded="true" />
+                <element signature="e#753#754#0" expanded="true" />
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,6 +137,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/Address.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java" />
       </list>
     </option>
@@ -93,9 +149,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="16" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="5" />
+    <option name="y" value="15" />
     <option name="width" value="1055" />
     <option name="height" value="980" />
   </component>
@@ -105,6 +161,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,13 +200,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -176,10 +233,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="13" width="844" height="784" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2557252" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1380697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -215,39 +271,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="-395">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#1378#1379#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
-            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#900#901#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1405#1406#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1792#1793#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
           </folding>
         </state>
       </provider>
