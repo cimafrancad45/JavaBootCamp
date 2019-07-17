@@ -12,10 +12,12 @@ public interface ConsoleDao {
 
     List<Console> getAllConsoles();
 
+    List<Console> getConsoleByManufacturer(String manufacturer);
+
     void updateConsole(Console console);
 
     void deleteConsole(int id);
 
-    Console findConsoleByManufacturer(int id);
+
 
 }

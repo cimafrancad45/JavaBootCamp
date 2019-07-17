@@ -4,7 +4,7 @@ import com.trilogyed.DarylCimafrancaU1Capstone.dto.TShirt;
 
 import java.util.List;
 
-public interface TshirtDao {
+public interface TShirtDao {
 
     TShirt addTShirt(TShirt tShirt);
 
@@ -12,11 +12,13 @@ public interface TshirtDao {
 
     List<TShirt> getAllTShirts();
 
+    List<TShirt> getTShirtsBySize(String size);
+
+    List<TShirt> getTShirtsByColor(String Color);
+
     void updateTShirt(TShirt tShirt);
 
     void deleteTShirt(int id);
 
-    TShirt getTShirtBySize(String size);
 
-    TShirt getTShirtByColor(String Color);
 }

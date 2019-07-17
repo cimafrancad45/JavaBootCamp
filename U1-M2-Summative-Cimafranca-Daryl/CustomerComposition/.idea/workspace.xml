@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3444928c-0eb9-4e9e-869a-d717a50a5058" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/ConsoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/ConsoleDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/GameDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/GameDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/InvoiceDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/InvoiceDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/ProcessingFeeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/TShirtDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/TaxesDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/TshirtDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dto/Console.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dto/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dto/Invoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/dto/TShirt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/service/ServiceLayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/main/java/com/trilogyed/DarylCimafrancaU1Capstone/viewmodel/InvoiceViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/ConsoleDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/GameDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/InvoiceDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/dao/TShirtDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/java/com/trilogyed/DarylCimafrancaU1Capstone/service/ServiceLayerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../U1 Capstone/DarylCimafrancaU1Capstone/src/test/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trilogyed/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorObject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CalculatorObject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IceCreamClassDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IceCreamClassDesign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IceCreamClassDesign/src/main/java/com/trilogyed/IceCreamShop.java" afterDir="false" />
-    </list>
+    <list default="true" id="3444928c-0eb9-4e9e-869a-d717a50a5058" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,7 +27,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-395">
+            <state relative-caret-position="17">
               <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="e#808#809#0" expanded="true" />
@@ -161,8 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +169,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,8 +205,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1380697" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14008042" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,7 +273,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/trilogyed/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-395">
+        <state relative-caret-position="17">
           <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="e#808#809#0" expanded="true" />

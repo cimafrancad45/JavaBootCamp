@@ -1,17 +1,30 @@
-package com.trilogyed.DarylCimafrancaU1Capstone.dto;
+package com.trilogyed.DarylCimafrancaU1Capstone.viewmodel;
 
+import com.trilogyed.DarylCimafrancaU1Capstone.dto.Console;
+
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Console {
+public class ConsoleViewModel {
     private int consoleId;
+    @NotEmpty(message = "Please enter the console's model.")
     private String model;
+    @NotEmpty(message = "Please enter the console's manufacturer.")
     private String manufacturer;
+    @NotEmpty(message = "Please enter the console's memory amount.")
     private String memoryAmount;
+    @NotEmpty(message = "Please enter the console's processor.")
     private String processor;
+    @NotEmpty(message = "Please the console's price.")
+    @DecimalMin(value = "0.00", inclusive = true)
+    @DecimalMax(value = "9999.99", inclusive = true)
     private BigDecimal price;
+    @NotEmpty(message = "Please enter a quantity.")
+    @Min(value = 0, message = "Quantity must be a non-negative number.")
     private int quantity;
 
     public int getConsoleId() {
@@ -74,18 +87,18 @@ public class Console {
     public boolean equals(Object c) {
         if (this == null) return true;
         if (c == null || getClass() != c.getClass()) return false;
-        Console console = (Console) c;
-        return getConsoleId() == this.getConsoleId() &&
-                Objects.equals(getModel(), console.getModel()) &&
-                Objects.equals(getManufacturer(), console.getManufacturer()) &&
-                Objects.equals(getProcessor(), console.getProcessor()) &&
-                Objects.equals(getPrice(), console.getPrice()) &&
-                getQuantity() == console.getQuantity();
+        ConsoleViewModel console = (ConsoleViewModel) c;
+        return consoleId == console.consoleId &&
+                model.equals(console.model) &&
+                manufacturer.equals(console.manufacturer) &&
+                processor.equals((console.processor))&&
+                price.equals(console.price) &&
+                quantity == console.quantity;
 
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getConsoleId(), getModel(), getManufacturer(), getProcessor(), getPrice(), getQuantity());
+        return Objects.hash(consoleId, model, manufacturer, processor, price, quantity);
     }
 }

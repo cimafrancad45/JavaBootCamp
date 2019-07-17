@@ -1,16 +1,28 @@
-package com.trilogyed.DarylCimafrancaU1Capstone.dto;
+package com.trilogyed.DarylCimafrancaU1Capstone.viewmodel;
 
+import com.trilogyed.DarylCimafrancaU1Capstone.dto.TShirt;
+
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class TShirt {
+public class TShirtViewModel {
     private int tShirtId;
+    @NotEmpty(message = "Please enter the T-shirt's size.")
     private String size;
+    @NotEmpty(message = "Please enter the T-shirt's color.")
     private String color;
+    @NotEmpty(message = "Please enter the T-shirt's description.")
     private String description;
+    @NotEmpty(message = "Please the T-shirt's price.")
+    @DecimalMin(value = "0.00", inclusive = true)
+    @DecimalMax(value = "9999.99", inclusive = true)
     private BigDecimal price;
+    @NotEmpty(message = "Please enter a quantity.")
+    @Min(value = 0, message = "Quantity must be a non-negative number.")
     private int quantity;
 
     public int getTShirtId() {
@@ -65,18 +77,18 @@ public class TShirt {
     public boolean equals(Object t) {
         if (this == null) return true;
         if (t == null || getClass() != t.getClass()) return false;
-        TShirt tshirt = (TShirt) t ;
+        TShirtViewModel tshirt = (TShirtViewModel) t;
 
-        return getTShirtId() == tshirt.getTShirtId() &&
-                Objects.equals(getSize(), tshirt.getSize()) &&
-                Objects.equals(getColor(), tshirt.getColor()) &&
-                Objects.equals(getDescription(), tshirt.getDescription()) &&
-                Objects.equals(getPrice(), tshirt.getPrice()) &&
-                getQuantity() == tshirt.getQuantity();
+        return tShirtId == tshirt.tShirtId &&
+                size.equals(tshirt.size) &&
+                color.equals(tshirt.color) &&
+                description.equals(tshirt.description) &&
+                price.equals(tshirt.price) &&
+                quantity == tshirt.quantity;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getTShirtId(), getSize(),getColor(),getDescription(),getPrice(),getQuantity());
+        return Objects.hash(tShirtId, size, color, description, price, quantity);
     }
 }

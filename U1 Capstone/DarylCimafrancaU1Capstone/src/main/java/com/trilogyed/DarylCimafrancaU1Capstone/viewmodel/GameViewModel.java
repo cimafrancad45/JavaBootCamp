@@ -1,17 +1,30 @@
-package com.trilogyed.DarylCimafrancaU1Capstone.dto;
+package com.trilogyed.DarylCimafrancaU1Capstone.viewmodel;
 
+import com.trilogyed.DarylCimafrancaU1Capstone.dto.Game;
+
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Game {
+public class GameViewModel {
     private int gameId;
+    @NotEmpty(message = "Please enter the game's title.")
     private String title;
+    @NotEmpty(message = "Please enter the game's ERSB rating.")
     private String ersbRating;
+    @NotEmpty(message = "Please enter the game's description.")
     private String description;
+    @NotEmpty(message = "Please the enter the game's price.")
+    @DecimalMin(value = "0.00", inclusive = true)
+    @DecimalMax(value = "9999.99", inclusive = true)
     private BigDecimal price;
+    @NotEmpty(message = "Please enter the game's studio.")
     private String studio;
+    @NotEmpty(message = "Please enter a quantity.")
+    @Min(value = 0, message = "Quantity must be a non-negative number.")
     private int quantity;
 
     public int getGameId() {
@@ -74,19 +87,18 @@ public class Game {
     public boolean equals(Object g) {
         if (this == null) return true;
         if (g == null || getClass() != g.getClass()) return false;
-        Game game = (Game) g;
+        GameViewModel game = (GameViewModel) g;
 
-        return getGameId() == game.getGameId() &&
-                Objects.equals(getTitle(), game.getTitle()) &&
-                Objects.equals(getErsbRating(), game.getErsbRating()) &&
-                Objects.equals(getDescription(), game.getDescription()) &&
-                Objects.equals(getPrice(), game.getPrice()) &&
-                Objects.equals(getStudio(), game.getStudio()) &&
-                getQuantity() == game.getQuantity();
+        return gameId == game.gameId &&
+                title.equals(game.title) &&
+                ersbRating.equals(game.ersbRating) &&
+                description.equals(game.description) &&
+                price.equals(game.price) &&
+                quantity == game.quantity;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getGameId(), getTitle(), getErsbRating(), getDescription(), getPrice(),getStudio(),getQuantity());
+        return Objects.hash(gameId, title, ersbRating, description, price, studio, quantity);
     }
 }

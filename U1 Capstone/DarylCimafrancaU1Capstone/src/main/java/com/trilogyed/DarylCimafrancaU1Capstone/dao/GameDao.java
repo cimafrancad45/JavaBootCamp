@@ -12,11 +12,15 @@ public interface GameDao {
 
     List<Game> getAllGames();
 
+    List<Game> findGamesByTitle(String title);
+
+    List<Game> findGamesByStudio(String studio);
+
+    List<Game> findGamesByERSB(String esrb);
+
     void updateGame(Game game);
 
     void deleteGame(int id);
 
-    Game findGameByESRB(String esrb);
 
-    Game findGameByTitle(String title);
 }

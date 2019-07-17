@@ -6,12 +6,13 @@ import java.util.Objects;
 public class Invoice {
     private int invoiceId;
     private String name;
+    private String street;
     private String city;
     private String state;
-    private String zipcode;
+    private String zipCode;
     private String itemType;
     private int itemId;
-    private BigDecimal unitProce;
+    private BigDecimal unitPrice;
     private int quantity;
     private BigDecimal subtotal;
     private BigDecimal tax;
@@ -34,6 +35,14 @@ public class Invoice {
         this.name = name;
     }
 
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
     public String getCity() {
         return city;
     }
@@ -51,11 +60,11 @@ public class Invoice {
     }
 
     public String getZipcode() {
-        return zipcode;
+        return zipCode;
     }
 
     public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+        this.zipCode = zipcode;
     }
 
     public String getItemType() {
@@ -74,12 +83,12 @@ public class Invoice {
         this.itemId = itemId;
     }
 
-    public BigDecimal getUnitProce() {
-        return unitProce;
+    public BigDecimal getUnitPrice() {
+        return unitPrice;
     }
 
-    public void setUnitProce(BigDecimal unitProce) {
-        this.unitProce = unitProce;
+    public void setUnitPrice(BigDecimal unitPrice) {
+        this.unitPrice = unitPrice;
     }
 
     public int getQuantity() {
@@ -123,16 +132,31 @@ public class Invoice {
     }
 
     @Override
-    public boolean equals(Object g) {
+    public boolean equals(Object i) {
         if (this == null) return true;
-        if (g == null || getClass() != g.getClass()) return false;
-        Game game = (Game) g;
+        if (i == null || getClass() != i.getClass()) return false;
+        Invoice invoice = (Invoice) i;
 
-        return false;
+        return getInvoiceId() == invoice.getInvoiceId() &&
+                Objects.equals(getName(), invoice.getName()) &&
+                Objects.equals(getStreet(), invoice.getStreet()) &&
+                Objects.equals(getCity(), invoice.getCity()) &&
+                Objects.equals(getState(), invoice.getState()) &&
+                Objects.equals(getZipcode(), invoice.getZipcode()) &&
+                Objects.equals(getItemType(), invoice.getItemType()) &&
+                Objects.equals(getItemId(), invoice.getItemId()) &&
+                Objects.equals(getUnitPrice(), invoice.getUnitPrice()) &&
+                getQuantity() == invoice.getQuantity() &&
+                Objects.equals(getSubtotal(), invoice.getSubtotal()) &&
+                Objects.equals(getTax(), invoice.getTax()) &&
+                Objects.equals(getProcessingFee(), invoice.getProcessingFee()) &&
+                Objects.equals(getTotal(), invoice.getTotal());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash();
+        return Objects.hash(
+                getInvoiceId(), getName(), getStreet(), getCity(), getState(), getZipcode(), getItemType(), getItemId(), getUnitPrice(), getQuantity(), getSubtotal(), getTax(), getProcessingFee(), getTotal()
+        );
     }
 }
