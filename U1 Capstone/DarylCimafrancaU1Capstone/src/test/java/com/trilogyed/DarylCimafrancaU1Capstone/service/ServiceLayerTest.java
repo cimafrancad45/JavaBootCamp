@@ -8,7 +8,6 @@ import com.trilogyed.DarylCimafrancaU1Capstone.dto.TShirt;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.InvoiceViewModel;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -23,11 +22,8 @@ public class ServiceLayerTest {
     ConsoleDao consoleDao;
     TShirtDao tShirtDao;
     InvoiceDao invoiceDao;
-    InvoiceServiceLayer service;
-
-    @Autowired
+    ServiceLayer service;
     TaxRateDao taxRateDao;
-    @Autowired
     ProcessingFeeDao processingFeeDao;
 
     @Before
@@ -38,7 +34,7 @@ public class ServiceLayerTest {
         setUpTShirtMock();
         setUpInvoiceMock();
 
-        service = new InvoiceServiceLayer(gameDao,consoleDao,tShirtDao,invoiceDao,processingFeeDao,taxRateDao);
+        service = new ServiceLayer(gameDao,consoleDao,tShirtDao,invoiceDao,processingFeeDao,taxRateDao);
     }
 
     private void setUpConsoleMock(){
@@ -70,7 +66,7 @@ public class ServiceLayerTest {
 
         doReturn(console).when(consoleDao).addConsole(console);
         doReturn(console).when(consoleDao).getConsole(4);
-        doReturn(console).when(consoleDao).getAllConsoles();
+        doReturn(cList).when(consoleDao).getAllConsoles();
 
     }
 
@@ -103,7 +99,7 @@ public class ServiceLayerTest {
 
         doReturn(game).when(gameDao).addGame(game);
         doReturn(game).when(gameDao).getGame(3);
-        doReturn(game).when(gameDao).getAllGames();
+        doReturn(gList).when(gameDao).getAllGames();
 
     }
 
@@ -131,7 +127,7 @@ public class ServiceLayerTest {
 
         doReturn(shirt).when(tShirtDao).addTShirt(shirt);
         doReturn(shirt).when(tShirtDao).getTShirt(65);
-        doReturn(shirt).when(tShirtDao).getAllTShirts();
+        doReturn(tList).when(tShirtDao).getAllTShirts();
     }
 
     private void setUpInvoiceMock(){
@@ -150,11 +146,9 @@ public class ServiceLayerTest {
         invoice.setItemId(29);
         invoice.setUnitPrice(new BigDecimal("499.99"));
         invoice.setQuantity(1);
-        invoice.setSubtotal(invoice.getUnitPrice().
-                add(invoice.getUnitPrice().multiply(taxRateDao.getTax(invoice.getState())))
-                .multiply(new BigDecimal(invoice.getQuantity())).setScale(2, BigDecimal.ROUND_HALF_UP));
-        invoice.setTax(taxRateDao.getTax(invoice.getState()));
-        invoice.setProcessingFee(processingFeeDao.getProcessingFee(invoice.getItemType()));
+        invoice.setSubtotal(new BigDecimal("499.99"));
+        invoice.setTax(new BigDecimal("0.05"));
+        invoice.setProcessingFee(new BigDecimal("14.99"));
         invoice.setTotal(invoice.getSubtotal().
                 add(invoice.getProcessingFee()).setScale(2, BigDecimal.ROUND_HALF_UP));
 
@@ -169,11 +163,9 @@ public class ServiceLayerTest {
         invoice2.setItemId(39);
         invoice2.setUnitPrice(new BigDecimal("299.99"));
         invoice2.setQuantity(1);
-        invoice2.setSubtotal(invoice2.getUnitPrice().
-                add(invoice2.getUnitPrice().multiply(taxRateDao.getTax(invoice2.getState())))
-                .multiply(new BigDecimal(invoice2.getQuantity())).setScale(2, BigDecimal.ROUND_HALF_UP));
-        invoice2.setTax(taxRateDao.getTax(invoice2.getState()));
-        invoice2.setProcessingFee(processingFeeDao.getProcessingFee(invoice2.getItemType()));
+        invoice2.setSubtotal(new BigDecimal("299.99"));
+        invoice2.setTax(new BigDecimal("0.05"));
+        invoice2.setProcessingFee(new BigDecimal("14.99"));
         invoice2.setTotal(invoice2.getSubtotal().
                 add(invoice2.getProcessingFee()).setScale(2, BigDecimal.ROUND_HALF_UP));
 
@@ -182,7 +174,7 @@ public class ServiceLayerTest {
 
         doReturn(invoice).when(invoiceDao).addInvoice(invoice2);
         doReturn(invoice).when(invoiceDao).getInvoice(3);
-        doReturn(invoice).when(invoiceDao).getAllInvoices();
+        doReturn(ivcList).when(invoiceDao).getAllInvoices();
 
     }
 
@@ -191,26 +183,80 @@ public class ServiceLayerTest {
         InvoiceViewModel invoice = new InvoiceViewModel();
 
         invoice.setInvoiceId(3);
-        invoice.setName("Daryl");
-        invoice.setStreet("39 Magical Ln");
+        invoice.setName("Justin");
+        invoice.setStreet("24 Lotus Ave");
         invoice.setCity("Princeton Junction");
         invoice.setState("NJ");
         invoice.setZipcode("08550");
         invoice.setItemType("Consoles");
-        invoice.setItemId(39);
-        invoice.setUnitPrice(new BigDecimal("299.99"));
+        invoice.setItemId(29);
+        invoice.setUnitPrice(new BigDecimal("499.99"));
         invoice.setQuantity(1);
-        invoice.setSubtotal(invoice.getUnitPrice().
-                add(invoice.getUnitPrice().multiply(taxRateDao.getTax(invoice.getState())))
-                .multiply(new BigDecimal(invoice.getQuantity())).setScale(2, BigDecimal.ROUND_HALF_UP));
-        invoice.setTax(taxRateDao.getTax(invoice.getState()));
-        invoice.setProcessingFee(processingFeeDao.getProcessingFee(invoice.getItemType()));
+        invoice.setSubtotal(new BigDecimal("499.99"));
+        invoice.setTax(new BigDecimal("0.05"));
+        invoice.setProcessingFee(new BigDecimal("14.99"));
         invoice.setTotal(invoice.getSubtotal().
                 add(invoice.getProcessingFee()).setScale(2, BigDecimal.ROUND_HALF_UP));
 
         invoice = service.addInvoice(invoice);
-        InvoiceViewModel invoice2 = service.getInvoiceById(invoice.getInvoiceId());
 
-        assertEquals(invoice, invoice2);
+        InvoiceViewModel invoiceFromService = service.getInvoiceById(invoice.getInvoiceId());
+
+        assertEquals(invoice, invoiceFromService);
+    }
+
+    @Test
+    public void updateInvoice(){
+
+    }
+
+    @Test
+    public void deleteInvoice(){
+
+    }
+
+    @Test
+    public void addGetConsole(){
+
+    }
+
+    @Test
+    public void updateConsole(){
+
+    }
+
+    @Test
+    public void deleteConsole(){
+
+    }
+
+    @Test
+    public void addGetGame(){
+
+    }
+
+    @Test
+    public void updateGame(){
+
+    }
+
+    @Test
+    public void deleteGame(){
+
+    }
+
+    @Test
+    public void addGetTShirt(){
+
+    }
+
+    @Test
+    public void updateTShirt(){
+
+    }
+
+    @Test
+    public void deleteTShirt(){
+
     }
 }

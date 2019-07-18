@@ -1,10 +1,35 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.controllers;
 
-public class ControllerExceptionHandler {
+import org.springframework.hateoas.VndErrors;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.context.request.WebRequest;
 
-public class NotFoundException extends Exception {
-    public NotFoundException(){
-        r
+import java.sql.SQLIntegrityConstraintViolationException;
+
+@RestControllerAdvice
+@RequestMapping(produces = "application/vnd.error+json")
+public class ControllerExceptionHandler {
+    @ExceptionHandler(value = {HttpMessageNotReadableException.class})
+    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    public ResponseEntity<VndErrors> jsonParserErrorException(HttpMessageNotReadableException e, WebRequest request)
+    {
+        VndErrors error = new VndErrors(request.toString(), "Please enter valid entries!");
+        ResponseEntity<VndErrors> responseEntity = new ResponseEntity<>(error, HttpStatus.UNPROCESSABLE_ENTITY);
+        return responseEntity;
     }
-}
+
+    @ExceptionHandler(value = {SQLIntegrityConstraintViolationException.class})
+    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    public ResponseEntity<VndErrors> integrityException(SQLIntegrityConstraintViolationException e, WebRequest request)
+    {
+        VndErrors error = new VndErrors(request.toString(), "Please enter valid entries!");
+        ResponseEntity<VndErrors> responseEntity = new ResponseEntity<>(error, HttpStatus.UNPROCESSABLE_ENTITY);
+        return responseEntity;
+    }
 }

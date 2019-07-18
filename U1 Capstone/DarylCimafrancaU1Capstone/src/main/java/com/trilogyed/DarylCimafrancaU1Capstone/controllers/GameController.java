@@ -1,9 +1,49 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.controllers;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.trilogyed.DarylCimafrancaU1Capstone.exception.NotFoundException;
+import com.trilogyed.DarylCimafrancaU1Capstone.service.ServiceLayer;
+import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.ConsoleViewModel;
+import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.GameViewModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/game")
 public class GameController {
+    @Autowired
+    ServiceLayer serviceLayer;
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public GameViewModel addGame(@RequestBody @Valid GameViewModel game) {
+        return serviceLayer.addGame(game);
+    }
+
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ConsoleViewModel getGame(@PathVariable("id") int id) {
+        ConsoleViewModel consoleViewModel = serviceLayer.getConsoleById(id);
+        if (consoleViewModel == null)
+            throw new NotFoundException("Console could not be found under id" + id);
+        return consoleViewModel;
+    }
+
+    @DeleteMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteConsole(@PathVariable("id") int id) {
+        serviceLayer.deleteGame(id);
+    }
+
+    @PutMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateGame(@PathVariable("id") int id, @RequestBody @Valid GameViewModel game) {
+        if (game.getGameId() == 0)
+            game.setGameId(id);
+        if (id != game.getGameId()) {
+            throw new IllegalArgumentException("Game IDs must match");
+        }
+    }
 }
