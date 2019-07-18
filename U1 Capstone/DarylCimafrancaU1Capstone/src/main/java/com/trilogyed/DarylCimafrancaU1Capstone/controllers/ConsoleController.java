@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/console")
@@ -30,6 +31,16 @@ public class ConsoleController {
             throw new NotFoundException("Console could not be found under id" + id);
         return consoleViewModel;
     }
+
+    @GetMapping("/{manufacturer}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<ConsoleViewModel> getConsolesByManufacturer(@PathVariable("manufacturer") String manufacturer) {
+        List<ConsoleViewModel> cvmList = gameStoreServiceLayer.getConsolesByManufacturer(manufacturer);
+        if (cvmList.size() == 0)
+            throw new NotFoundException("Console could not be found under that manufacturer name");
+        return cvmList;
+    }
+
 
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

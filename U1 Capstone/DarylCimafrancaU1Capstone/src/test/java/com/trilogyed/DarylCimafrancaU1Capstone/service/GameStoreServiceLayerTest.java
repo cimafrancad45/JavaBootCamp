@@ -7,6 +7,7 @@ import com.trilogyed.DarylCimafrancaU1Capstone.dto.Invoice;
 import com.trilogyed.DarylCimafrancaU1Capstone.dto.TShirt;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.InvoiceViewModel;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.TShirtViewModel;
+import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -230,6 +231,24 @@ public class GameStoreServiceLayerTest {
 
     }
 
+    @Test
+    public void getConsolesByManufacturer(){
+
+        Console console = new Console();
+
+        console.setModel("Playstation 4");
+        console.setManufacturer("Sony");
+        console.setProcessor("ARM processor");
+        console.setMemoryAmount("32GB");
+        console.setPrice(new BigDecimal("499.99"));
+        console.setQuantity(25);
+
+        consoleDao.addConsole(console);
+
+        List<Console> sonyList = consoleDao.getConsoleByManufacturer("Sony");
+
+        TestCase.assertEquals(sonyList.size(), 1);
+    }
 
     @Test
     public void saveFindGame(){

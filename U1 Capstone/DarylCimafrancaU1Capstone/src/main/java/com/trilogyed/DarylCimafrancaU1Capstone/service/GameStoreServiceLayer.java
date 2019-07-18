@@ -13,6 +13,9 @@ import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.TShirtViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class GameStoreServiceLayer {
 
@@ -121,6 +124,19 @@ public class GameStoreServiceLayer {
             return null;
         else
             return buildConsoleViewModel(console);
+    }
+
+    public List<ConsoleViewModel> getConsolesByManufacturer(String manufacturer){
+        List<Console> cList = consoleDao.getConsoleByManufacturer(manufacturer);
+        List<ConsoleViewModel> cvmList = new ArrayList<>();
+
+        for (Console c : cList){
+            cvmList.add(buildConsoleViewModel(c));
+        }
+        if (cList.size() == 0)
+            return null;
+        else
+            return cvmList;
     }
 
     public void updateConsole(ConsoleViewModel consoleViewModel) {
