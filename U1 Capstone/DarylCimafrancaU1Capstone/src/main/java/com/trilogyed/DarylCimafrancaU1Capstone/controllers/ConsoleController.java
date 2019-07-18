@@ -1,34 +1,31 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.controllers;
 
-import com.trilogyed.DarylCimafrancaU1Capstone.dto.Console;
 import com.trilogyed.DarylCimafrancaU1Capstone.exception.NotFoundException;
-import com.trilogyed.DarylCimafrancaU1Capstone.service.ServiceLayer;
+import com.trilogyed.DarylCimafrancaU1Capstone.service.GameStoreServiceLayer;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.ConsoleViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpClientErrorException;
 
 import javax.validation.Valid;
-import javax.validation.constraints.DecimalMin;
 
 @RestController
 @RequestMapping(value = "/console")
 public class ConsoleController {
 
     @Autowired
-    ServiceLayer serviceLayer;
+    GameStoreServiceLayer gameStoreServiceLayer;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public ConsoleViewModel addConsole(@RequestBody @Valid ConsoleViewModel console){
-        return serviceLayer.addConsole(console);
+        return gameStoreServiceLayer.saveConsole(console);
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ConsoleViewModel getConsole(@PathVariable("id") int id) {
-        ConsoleViewModel consoleViewModel = serviceLayer.getConsoleById(id);
+        ConsoleViewModel consoleViewModel = gameStoreServiceLayer.getConsoleById(id);
         if (consoleViewModel == null)
             throw new NotFoundException("Console could not be found under id" + id);
         return consoleViewModel;
@@ -37,7 +34,7 @@ public class ConsoleController {
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteConsole(@PathVariable("id") int id){
-        serviceLayer.deleteConsole(id);
+        gameStoreServiceLayer.deleteConsole(id);
     }
 
     @PutMapping("{id}")
@@ -50,6 +47,6 @@ public class ConsoleController {
         }
 
 
-        serviceLayer.updateConsole(consoleViewModel);
+        gameStoreServiceLayer.updateConsole(consoleViewModel);
     }
 }

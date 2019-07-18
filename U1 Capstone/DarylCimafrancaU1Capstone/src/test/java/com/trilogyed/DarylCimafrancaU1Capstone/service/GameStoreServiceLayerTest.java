@@ -6,8 +6,10 @@ import com.trilogyed.DarylCimafrancaU1Capstone.dto.Game;
 import com.trilogyed.DarylCimafrancaU1Capstone.dto.Invoice;
 import com.trilogyed.DarylCimafrancaU1Capstone.dto.TShirt;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.InvoiceViewModel;
+import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.TShirtViewModel;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -17,27 +19,29 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 
-public class ServiceLayerTest {
+public class GameStoreServiceLayerTest {
     GameDao gameDao;
     ConsoleDao consoleDao;
     TShirtDao tShirtDao;
     InvoiceDao invoiceDao;
-    ServiceLayer service;
+    GameStoreServiceLayer service;
+    @Autowired
     TaxRateDao taxRateDao;
+    @Autowired
     ProcessingFeeDao processingFeeDao;
 
     @Before
     public void setUp() throws Exception{
 
-        setUpConsoleMock();
-        setUpGameMock();
-        setUpTShirtMock();
-        setUpInvoiceMock();
+        setUpConsoleDaoMock();
+        setUpGameDaoMock();
+        setUpTShirtDaoMock();
+        setUpInvoiceDaoMock();
 
-        service = new ServiceLayer(gameDao,consoleDao,tShirtDao,invoiceDao,processingFeeDao,taxRateDao);
+        service = new GameStoreServiceLayer(gameDao,consoleDao,tShirtDao,invoiceDao);
     }
 
-    private void setUpConsoleMock(){
+    private void setUpConsoleDaoMock(){
 
         consoleDao = mock(ConsoleDaoImpl.class);
 
@@ -70,7 +74,7 @@ public class ServiceLayerTest {
 
     }
 
-    private void setUpGameMock(){
+    private void setUpGameDaoMock(){
 
         gameDao = mock(GameDaoImpl.class);
 
@@ -104,7 +108,7 @@ public class ServiceLayerTest {
     }
 
 
-    private void setUpTShirtMock(){
+    private void setUpTShirtDaoMock(){
         tShirtDao = mock(TShirtDaoImpl.class);
 
         TShirt shirt = new TShirt();
@@ -130,7 +134,7 @@ public class ServiceLayerTest {
         doReturn(tList).when(tShirtDao).getAllTShirts();
     }
 
-    private void setUpInvoiceMock(){
+    private void setUpInvoiceDaoMock(){
 
         invoiceDao = mock(InvoiceDaoImpl.class);
 
@@ -153,7 +157,6 @@ public class ServiceLayerTest {
                 add(invoice.getProcessingFee()).setScale(2, BigDecimal.ROUND_HALF_UP));
 
         Invoice invoice2 = new Invoice();
-        invoice2.setInvoiceId(3);
         invoice2.setName("Daryl");
         invoice2.setStreet("39 Magical Ln");
         invoice2.setCity("Princeton Junction");
@@ -180,83 +183,88 @@ public class ServiceLayerTest {
 
     @Test
     public void saveFindInvoice(){
-        InvoiceViewModel invoice = new InvoiceViewModel();
+        Invoice invoice = new Invoice();
 
-        invoice.setInvoiceId(3);
         invoice.setName("Justin");
         invoice.setStreet("24 Lotus Ave");
         invoice.setCity("Princeton Junction");
         invoice.setState("NJ");
         invoice.setZipcode("08550");
         invoice.setItemType("Consoles");
-        invoice.setItemId(29);
+        invoice.setItemId(39);
         invoice.setUnitPrice(new BigDecimal("499.99"));
         invoice.setQuantity(1);
-        invoice.setSubtotal(new BigDecimal("499.99"));
-        invoice.setTax(new BigDecimal("0.05"));
-        invoice.setProcessingFee(new BigDecimal("14.99"));
+        invoice.setSubtotal(invoice.getUnitPrice().
+                add(invoice.getUnitPrice().multiply(taxRateDao.getTax(invoice.getState())))
+                .multiply(new BigDecimal(invoice.getQuantity())).setScale(2, BigDecimal.ROUND_HALF_UP));
+        invoice.setTax(taxRateDao.getTax(invoice.getState()));
+        invoice.setProcessingFee(processingFeeDao.getProcessingFee(invoice.getItemType()));
         invoice.setTotal(invoice.getSubtotal().
                 add(invoice.getProcessingFee()).setScale(2, BigDecimal.ROUND_HALF_UP));
 
-        invoice = service.addInvoice(invoice);
 
-        InvoiceViewModel invoiceFromService = service.getInvoiceById(invoice.getInvoiceId());
+        invoice = invoiceDao.addInvoice(invoice);
 
-        assertEquals(invoice, invoiceFromService);
-    }
+        Invoice invoice2 = invoiceDao.getInvoice(invoice.getInvoiceId());
 
-    @Test
-    public void updateInvoice(){
+        assertEquals(invoice2, invoice);
 
     }
 
     @Test
-    public void deleteInvoice(){
+    public void saveFindConsole(){
+        Console console = new Console();
+
+        console.setModel("Playstation 4");
+        console.setManufacturer("Sony");
+        console.setProcessor("ARM processor");
+        console.setMemoryAmount("32GB");
+        console.setPrice(new BigDecimal("499.99"));
+        console.setQuantity(25);
+
+        console = consoleDao.addConsole(console);
+
+        Console console2 = consoleDao.getConsole(console.getConsoleId());
+
+        assertEquals(console, console2);
 
     }
 
-    @Test
-    public void addGetConsole(){
-
-    }
 
     @Test
-    public void updateConsole(){
+    public void saveFindGame(){
+        Game game = new Game();
 
-    }
+        game.setTitle("Samurai Showdown");
+        game.setErsbRating("M");
+        game.setDescription("A return of an arcade classic fighting game!");
+        game.setStudio("SNK");
+        game.setPrice(new BigDecimal ("59.99"));
+        game.setQuantity(10);
 
-    @Test
-    public void deleteConsole(){
+        game = gameDao.addGame(game);
 
-    }
+        Game game2 = gameDao.getGame(game.getGameId());
 
-    @Test
-    public void addGetGame(){
-
-    }
-
-    @Test
-    public void updateGame(){
-
-    }
-
-    @Test
-    public void deleteGame(){
+        assertEquals(game, game2);
 
     }
 
     @Test
     public void addGetTShirt(){
+        TShirtViewModel shirt = new TShirtViewModel();
+
+        shirt.setSize("M");
+        shirt.setColor("Blue");
+        shirt.setDescription("A Sonic T-shirt");
+        shirt.setPrice(new BigDecimal("9.99"));
+        shirt.setQuantity(4);
+
+        shirt = service.addTShirt(shirt);
+        TShirtViewModel fromService = service.getTShirt(shirt.getTShirtId());
+
+        assertEquals(fromService, shirt);
 
     }
 
-    @Test
-    public void updateTShirt(){
-
-    }
-
-    @Test
-    public void deleteTShirt(){
-
-    }
 }

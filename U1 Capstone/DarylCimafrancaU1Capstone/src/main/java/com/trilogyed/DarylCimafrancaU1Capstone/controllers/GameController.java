@@ -1,7 +1,7 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.controllers;
 
 import com.trilogyed.DarylCimafrancaU1Capstone.exception.NotFoundException;
-import com.trilogyed.DarylCimafrancaU1Capstone.service.ServiceLayer;
+import com.trilogyed.DarylCimafrancaU1Capstone.service.GameStoreServiceLayer;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.ConsoleViewModel;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.GameViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,18 +14,18 @@ import javax.validation.Valid;
 @RequestMapping(value = "/game")
 public class GameController {
     @Autowired
-    ServiceLayer serviceLayer;
+    GameStoreServiceLayer gameStoreServiceLayer;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public GameViewModel addGame(@RequestBody @Valid GameViewModel game) {
-        return serviceLayer.addGame(game);
+        return gameStoreServiceLayer.addGame(game);
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ConsoleViewModel getGame(@PathVariable("id") int id) {
-        ConsoleViewModel consoleViewModel = serviceLayer.getConsoleById(id);
+        ConsoleViewModel consoleViewModel = gameStoreServiceLayer.getConsoleById(id);
         if (consoleViewModel == null)
             throw new NotFoundException("Console could not be found under id" + id);
         return consoleViewModel;
@@ -34,7 +34,7 @@ public class GameController {
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteConsole(@PathVariable("id") int id) {
-        serviceLayer.deleteGame(id);
+        gameStoreServiceLayer.deleteGame(id);
     }
 
     @PutMapping("{id}")

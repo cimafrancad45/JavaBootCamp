@@ -1,7 +1,5 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.viewmodel;
 
-import com.trilogyed.DarylCimafrancaU1Capstone.dto.TShirt;
-
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;

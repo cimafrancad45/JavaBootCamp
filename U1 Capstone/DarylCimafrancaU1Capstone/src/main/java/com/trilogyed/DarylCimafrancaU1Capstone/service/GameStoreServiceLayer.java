@@ -14,88 +14,90 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ServiceLayer {
+public class GameStoreServiceLayer {
 
     GameDao gameDao;
     ConsoleDao consoleDao;
     TShirtDao tShirtDao;
     InvoiceDao invoiceDao;
+    @Autowired
     ProcessingFeeDao processingFeeDao;
+    @Autowired
     TaxRateDao taxRateDao;
 
     @Autowired
-    public ServiceLayer(GameDao gameDao, ConsoleDao consoleDao, TShirtDao tShirtDao, InvoiceDao invoiceDao, ProcessingFeeDao processingFeeDao, TaxRateDao taxRateDao) {
+    public GameStoreServiceLayer(GameDao gameDao, ConsoleDao consoleDao, TShirtDao tShirtDao, InvoiceDao invoiceDao) {
         this.gameDao = gameDao;
         this.consoleDao = consoleDao;
         this.tShirtDao = tShirtDao;
         this.invoiceDao = invoiceDao;
-        this.processingFeeDao = processingFeeDao;
-        this.taxRateDao = taxRateDao;
+
     }
-
-    //Invoice
-
-
-    public InvoiceViewModel addInvoice(InvoiceViewModel invoiceViewModel) {
-
-        Invoice invoice = new Invoice();
-
-        invoice.setName(invoiceViewModel.getName());
-        invoice.setStreet(invoiceViewModel.getStreet());
-        invoice.setCity(invoiceViewModel.getCity());
-        invoice.setState(invoiceViewModel.getState());
-        invoice.setZipcode(invoiceViewModel.getZipcode());
-        invoice.setItemType(invoiceViewModel.getItemType());
-        invoice.setItemId(invoiceViewModel.getItemId());
-        invoice.setUnitPrice(invoiceViewModel.getUnitPrice());
-        invoice.setQuantity(invoiceViewModel.getQuantity());
-        invoice.setSubtotal(invoiceViewModel.getSubtotal());
-        invoice.setTax(invoiceViewModel.getTax());
-        invoice.setProcessingFee(invoiceViewModel.getProcessingFee());
-        invoice.setTotal(invoiceViewModel.getTotal());
-
-        invoice = invoiceDao.addInvoice(invoice);
-
-        invoiceViewModel.setInvoiceId(invoice.getInvoiceId());
-
-        return invoiceViewModel;
-    }
-
-    public void updateInvoice(InvoiceViewModel invoiceViewModel) {
-
-        Invoice invoice = new Invoice();
-        invoice.setInvoiceId(invoiceViewModel.getInvoiceId());
-        invoice.setName(invoiceViewModel.getName());
-        invoice.setStreet(invoiceViewModel.getStreet());
-        invoice.setCity(invoiceViewModel.getCity());
-        invoice.setState(invoiceViewModel.getState());
-        invoice.setZipcode(invoiceViewModel.getZipcode());
-        invoice.setItemType(invoiceViewModel.getItemType());
-        invoice.setItemId(invoiceViewModel.getItemId());
-        invoice.setUnitPrice(invoiceViewModel.getUnitPrice());
-        invoice.setQuantity(invoiceViewModel.getQuantity());
-        invoice.setSubtotal(invoiceViewModel.getSubtotal());
-        invoice.setTax(invoiceViewModel.getTax());
-        invoice.setProcessingFee(invoiceViewModel.getProcessingFee());
-        invoice.setTotal(invoiceViewModel.getTotal());
-
-        invoiceDao.updateInvoice(invoice);
-    }
-
-    public InvoiceViewModel getInvoiceById(int id) {
-        Invoice invoice = invoiceDao.getInvoice(id);
-        if (invoice == null)
-            return null;
-        else
-            return buildInvoiceViewModel(invoice);
-    }
-
-    public void deleteInvoice(int id) {
-        invoiceDao.deleteInvoice(id);
-    }
+//
+//    //Invoice
+//
+//
+//    public InvoiceViewModel addInvoice(InvoiceViewModel invoiceViewModel) {
+//
+//        Invoice invoice = new Invoice();
+//
+//        invoice.setName(invoiceViewModel.getName());
+//        invoice.setStreet(invoiceViewModel.getStreet());
+//        invoice.setCity(invoiceViewModel.getCity());
+//        invoice.setState(invoiceViewModel.getState());
+//        invoice.setZipcode(invoiceViewModel.getZipcode());
+//        invoice.setItemType(invoiceViewModel.getItemType());
+//        invoice.setItemId(invoiceViewModel.getItemId());
+//        invoice.setUnitPrice(invoiceViewModel.getUnitPrice());
+//        invoice.setQuantity(invoiceViewModel.getQuantity());
+//        invoice.setSubtotal(invoiceViewModel.getSubtotal());
+//        invoice.setTax(invoiceViewModel.getTax());
+//        invoice.setProcessingFee(invoiceViewModel.getProcessingFee());
+//        invoice.setTotal(invoiceViewModel.getTotal());
+//
+//        invoice = invoiceDao.addInvoice(invoice);
+//
+//        invoiceViewModel.setInvoiceId(invoice.getInvoiceId());
+//
+//        return invoiceViewModel;
+//    }
+//
+//    public void updateInvoice(InvoiceViewModel invoiceViewModel) {
+//
+//        Invoice invoice = new Invoice();
+//        invoice.setInvoiceId(invoiceViewModel.getInvoiceId());
+//        invoice.setName(invoiceViewModel.getName());
+//        invoice.setStreet(invoiceViewModel.getStreet());
+//        invoice.setCity(invoiceViewModel.getCity());
+//        invoice.setState(invoiceViewModel.getState());
+//        invoice.setZipcode(invoiceViewModel.getZipcode());
+//        invoice.setItemType(invoiceViewModel.getItemType());
+//        invoice.setItemId(invoiceViewModel.getItemId());
+//        invoice.setUnitPrice(invoiceViewModel.getUnitPrice());
+//        invoice.setQuantity(invoiceViewModel.getQuantity());
+//        invoice.setSubtotal(invoiceViewModel.getSubtotal());
+//        invoice.setTax(invoiceViewModel.getTax());
+//        invoice.setProcessingFee(invoiceViewModel.getProcessingFee());
+//        invoice.setTotal(invoiceViewModel.getTotal());
+//
+//        invoiceDao.updateInvoice(invoice);
+//    }
+//
+//    public InvoiceViewModel getInvoiceById(int id) {
+//        Invoice invoice = invoiceDao.getInvoice(id);
+//        if (invoice == null)
+//            return null;
+//        else
+//            return buildInvoiceViewModel(invoice);
+//    }
+//
+//    public void deleteInvoice(int id) {
+//        invoiceDao.deleteInvoice(id);
+//    }
 
     //Consoles
-    public ConsoleViewModel addConsole(ConsoleViewModel consoleViewModel) {
+
+    public ConsoleViewModel saveConsole(ConsoleViewModel consoleViewModel) {
         Console console = new Console();
 
         console.setModel(consoleViewModel.getModel());
