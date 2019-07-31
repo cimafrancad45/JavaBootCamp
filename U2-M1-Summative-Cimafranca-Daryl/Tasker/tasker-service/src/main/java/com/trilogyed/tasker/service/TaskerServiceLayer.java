@@ -47,17 +47,14 @@ public class TaskerServiceLayer{
 
     public List<TaskViewModel> fetchAllTasks() {
         List<Task> taskList = dao.getAllTasks();
-        TaskViewModel tvm = new TaskViewModel();
+
         List<TaskViewModel> tvmList = new ArrayList<>();
 
+        TaskViewModel tvm = new TaskViewModel();
+
         for (Task t : taskList){
-                tvm.setId(t.getId());
-                tvm.setDescription(t.getDescription());
-                tvm.setCreateDate(t.getCreateDate());
-                tvm.setDueDate(t.getDueDate());
-                tvm.setCategory(t.getCategory());
-                tvm.setAdvertisement(client.getAd());
-                tvmList.add(tvm);
+
+                tvmList.add(buildViewModel(t));
         }
 
         return tvmList;
@@ -65,16 +62,13 @@ public class TaskerServiceLayer{
 
     public List<TaskViewModel> fetchTasksByCategory(String category) {
         List<Task> taskList = dao.getTasksByCategory(category);
-        TaskViewModel tvm = new TaskViewModel();
+
         List<TaskViewModel> tvmList = new ArrayList<>();
 
+        TaskViewModel tvm = new TaskViewModel();
+
         for (Task t : taskList){
-            tvm.setId(t.getId());
-            tvm.setDescription(t.getDescription());
-            tvm.setCreateDate(t.getCreateDate());
-            tvm.setDueDate(t.getDueDate());
-            tvm.setCategory(t.getCategory());
-            tvmList.add(tvm);
+            tvmList.add(buildViewModel(t));
         }
         return tvmList;
     }
@@ -109,5 +103,19 @@ public class TaskerServiceLayer{
         task.setCategory(taskViewModel.getCategory());
 
         dao.updateTask(task);
+    }
+
+    public TaskViewModel buildViewModel (Task task){
+
+        TaskViewModel taskViewModel = new TaskViewModel();
+        taskViewModel.setId(task.getId());
+        taskViewModel.setDescription(task.getDescription());
+        taskViewModel.setCreateDate(task.getCreateDate());
+        taskViewModel.setDueDate(task.getDueDate());
+        taskViewModel.setCategory(task.getCategory());
+        taskViewModel.setAdvertisement(client.getAd());
+
+
+        return taskViewModel;
     }
 }

@@ -1,13 +1,19 @@
 package com.trilogyed.tasker.model;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class TaskViewModel {
     private int id;
+//    @NotEmpty(message = "Description required")
     private String description;
+//    @NotNull(message = "Date must be a valid input")
     private LocalDate createDate;
+//    @NotNull(message = "Date must be a valid input")
     private LocalDate dueDate;
+//    @NotEmpty(message = "Category required")
     private String category;
     private String advertisement;
 
