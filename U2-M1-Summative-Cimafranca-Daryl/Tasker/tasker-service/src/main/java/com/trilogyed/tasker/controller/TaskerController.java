@@ -60,13 +60,15 @@ public class TaskerController {
 
     @PutMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateTask(@PathVariable int id, TaskViewModel taskViewModel){
+    public void updateTask(@PathVariable("id") int id, @RequestBody @Valid TaskViewModel taskViewModel){
+        if (taskViewModel.getId() == 0)
+            taskViewModel.setId(id);
         service.updateTask(taskViewModel);
     }
 
     @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteTask(@PathVariable int id) {
+    public void deleteTask(@PathVariable("id") int id) {
         service.deleteTask(id);
     }
 }
