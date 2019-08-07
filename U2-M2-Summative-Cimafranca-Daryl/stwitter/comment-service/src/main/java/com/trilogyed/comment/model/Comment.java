@@ -1,6 +1,7 @@
 package com.trilogyed.comment.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Comment {
 
@@ -40,5 +41,34 @@ public class Comment {
 
     public void setCommenterName(String commenterName) {
         this.commenterName = commenterName;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Comment c = (Comment) o;
+        return commentId == c.commentId &&
+                postId == c.postId &&
+                Objects.equals(createDate, c.createDate)&&
+                Objects.equals(commenterName, c.commenterName) &&
+                Objects.equals(comment, c.comment);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(commentId, postId, createDate, commenterName, comment);
     }
 }
