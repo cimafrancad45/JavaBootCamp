@@ -1,8 +1,7 @@
 package com.trilogyed.stwitter.controller;
 
 import com.trilogyed.stwitter.model.Post;
-import com.trilogyed.stwitter.service.ServiceLayer;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.trilogyed.stwitter.service.StwitterService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -14,9 +13,9 @@ public class StwitterController {
 
 
 
-    ServiceLayer service;
+    StwitterService service;
 
-    public StwitterController(ServiceLayer service) {
+    public StwitterController(StwitterService service) {
         this.service = service;
     }
 

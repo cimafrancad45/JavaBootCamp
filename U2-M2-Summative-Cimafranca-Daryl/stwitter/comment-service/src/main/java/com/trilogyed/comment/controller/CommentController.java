@@ -38,13 +38,17 @@ public class CommentController {
         return commentDao.getAllComments();
     }
 
-    @PutMapping
+    @PutMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateComment(@RequestBody Comment comment){
+    public void updateComment(@PathVariable("id") int id, @RequestBody Comment comment){
+        if (comment.getCommentId() == 0)
+        comment.setCommentId(id);
         commentDao.updateComment(comment);
+        if(id!=comment.getCommentId())
+            throw new IllegalArgumentException("Comment ID does not match with comment!");
     }
 
-    @DeleteMapping
+    @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteComment(@PathVariable("id") int id){
         commentDao.deleteComment(id);

@@ -9,6 +9,7 @@ public interface PostDao {
     Post createPost(Post post);
     Post getPost(int id);
     List<Post> getAllPosts();
-    Post updatePost(Post post);
+    void updatePost(Post post);
+    void deletePost(int id);
 
 }

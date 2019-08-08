@@ -1,20 +1,21 @@
 package com.trilogyed.post.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Post {
 
-    private int postID;
+    private int postId;
     private LocalDate postDate;
     private String posterName;
     private String post;
 
-    public int getPostID() {
-        return postID;
+    public int getPostId() {
+        return postId;
     }
 
-    public void setPostID(int postID) {
-        this.postID = postID;
+    public void setPostId(int postId) {
+        this.postId = postId;
     }
 
     public LocalDate getPostDate() {
@@ -39,5 +40,23 @@ public class Post {
 
     public void setPost(String post) {
         this.post = post;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Post p = (Post) o;
+        return postId == p.postId &&
+                        Objects.equals(postDate, p.postDate) &&
+                        Objects.equals(posterName, p.posterName) &&
+                        Objects.equals(post, p.post);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(postId, postDate, posterName, post);
     }
 }
