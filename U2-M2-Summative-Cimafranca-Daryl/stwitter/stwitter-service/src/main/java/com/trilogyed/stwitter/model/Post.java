@@ -2,14 +2,14 @@ package com.trilogyed.stwitter.model;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 
 public class Post {
 
     private int postId;
-    private String postContent;
     private LocalDate postDate;
     private String posterName;
-    private List<String> comments;
+    private String post;
 
     public int getPostId() {
         return postId;
@@ -17,14 +17,6 @@ public class Post {
 
     public void setPostId(int postId) {
         this.postId = postId;
-    }
-
-    public String getPostContent() {
-        return postContent;
-    }
-
-    public void setPostContent(String postContent) {
-        this.postContent = postContent;
     }
 
     public LocalDate getPostDate() {
@@ -43,22 +35,30 @@ public class Post {
         this.posterName = posterName;
     }
 
-    public List<String> getComments() {
-        return comments;
+    public String getPost() {
+        return post;
     }
 
-    public void setComments(List<String> comments) {
-        this.comments = comments;
+    public void setPost(String post) {
+        this.post = post;
     }
+
     @Override
     public boolean equals(Object o) {
-        return super.equals(o);
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Post p = (Post) o;
+        return postId == p.postId &&
+                Objects.equals(postDate, p.postDate) &&
+                Objects.equals(posterName, p.posterName) &&
+                Objects.equals(post, p.post);
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(postId, postDate, posterName, post);
     }
-
 
 }

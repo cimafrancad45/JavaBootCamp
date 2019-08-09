@@ -1,13 +1,14 @@
 package com.trilogyed.stwitter.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Comment {
     private int commentId;
     private int postId;
     private String commenterName;
-    private LocalDate commentDate;
-    private String commentContent;
+    private LocalDate createDate;
+    private String comment;
 
     public int getCommentId() {
         return commentId;
@@ -33,30 +34,39 @@ public class Comment {
         this.commenterName = commenterName;
     }
 
-    public LocalDate getCommentDate() {
-        return commentDate;
+    public LocalDate getCreateDate() {
+        return createDate;
     }
 
-    public void setCommentDate(LocalDate commentDate) {
-        this.commentDate = commentDate;
+    public void setCreateDate(LocalDate createDate) {
+        this.createDate = createDate;
     }
 
-    public String getCommentContent() {
-        return commentContent;
+    public String getComment() {
+        return comment;
     }
 
-    public void setCommentContent(String commentContent) {
-        this.commentContent = commentContent;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Comment c = (Comment) o;
+        return commentId == c.commentId &&
+                postId == c.postId &&
+                Objects.equals(createDate, c.createDate)&&
+                Objects.equals(commenterName, c.commenterName) &&
+                Objects.equals(comment, c.comment);
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(commentId, postId, createDate, commenterName, comment);
     }
 
 
