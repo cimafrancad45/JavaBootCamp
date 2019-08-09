@@ -3,6 +3,7 @@ package com.trilogyed.comment.controller;
 import com.trilogyed.comment.dao.CommentDao;
 import com.trilogyed.comment.model.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/comment")
+@RefreshScope
 public class CommentController {
     @Autowired
     private CommentDao commentDao;
