@@ -14,4 +14,6 @@ public class CommentQueueConsumerApplication {
 		SpringApplication.run(CommentQueueConsumerApplication.class, args);
 	}
 
+	public static final String COMMENT_QUEUE = "comment-exchange";
+
 }

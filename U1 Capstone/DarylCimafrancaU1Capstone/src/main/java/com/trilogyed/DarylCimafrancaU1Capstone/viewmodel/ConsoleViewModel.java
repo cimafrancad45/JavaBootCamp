@@ -1,9 +1,6 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.viewmodel;
 
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -17,12 +14,11 @@ public class ConsoleViewModel {
     private String memoryAmount;
     @NotEmpty(message = "Please enter the console's processor.")
     private String processor;
-    @NotEmpty(message = "Please the console's price.")
-    @DecimalMin(value = "0.00", inclusive = true)
+    @NotNull(message = "Please the enter the game's price.")
+    @PositiveOrZero(message = "Price is invalid")
     @DecimalMax(value = "9999.99", inclusive = true)
     private BigDecimal price;
-    @NotEmpty(message = "Please enter a quantity.")
-    @Min(value = 0, message = "Quantity must be a non-negative number.")
+    @Positive(message = "Quantity must be a non-negative number.")
     private int quantity;
 
     public int getConsoleId() {

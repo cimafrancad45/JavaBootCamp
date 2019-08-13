@@ -12,93 +12,36 @@ import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.InvoiceViewModel;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.TShirtViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class GameStoreServiceLayer {
 
-    GameDao gameDao;
-    ConsoleDao consoleDao;
-    TShirtDao tShirtDao;
-    InvoiceDao invoiceDao;
-    @Autowired
-    ProcessingFeeDao processingFeeDao;
-    @Autowired
-    TaxRateDao taxRateDao;
+    private GameDao gameDao;
+    private ConsoleDao consoleDao;
+    private TShirtDao tShirtDao;
+    private InvoiceDao invoiceDao;
+    private TaxRateDao taxRateDao;
+    private ProcessingFeeDao processingFeeDao;
 
     @Autowired
-    public GameStoreServiceLayer(GameDao gameDao, ConsoleDao consoleDao, TShirtDao tShirtDao, InvoiceDao invoiceDao) {
+    public GameStoreServiceLayer(GameDao gameDao, ConsoleDao consoleDao, TShirtDao tShirtDao, InvoiceDao invoiceDao, TaxRateDao taxRateDao, ProcessingFeeDao processingFeeDao) {
         this.gameDao = gameDao;
         this.consoleDao = consoleDao;
         this.tShirtDao = tShirtDao;
         this.invoiceDao = invoiceDao;
+        this.taxRateDao = taxRateDao;
+        this.processingFeeDao = processingFeeDao;
 
     }
-//
-//    //Invoice
-//
-//
-//    public InvoiceViewModel addInvoice(InvoiceViewModel invoiceViewModel) {
-//
-//        Invoice invoice = new Invoice();
-//
-//        invoice.setName(invoiceViewModel.getName());
-//        invoice.setStreet(invoiceViewModel.getStreet());
-//        invoice.setCity(invoiceViewModel.getCity());
-//        invoice.setState(invoiceViewModel.getState());
-//        invoice.setZipcode(invoiceViewModel.getZipcode());
-//        invoice.setItemType(invoiceViewModel.getItemType());
-//        invoice.setItemId(invoiceViewModel.getItemId());
-//        invoice.setUnitPrice(invoiceViewModel.getUnitPrice());
-//        invoice.setQuantity(invoiceViewModel.getQuantity());
-//        invoice.setSubtotal(invoiceViewModel.getSubtotal());
-//        invoice.setTax(invoiceViewModel.getTax());
-//        invoice.setProcessingFee(invoiceViewModel.getProcessingFee());
-//        invoice.setTotal(invoiceViewModel.getTotal());
-//
-//        invoice = invoiceDao.addInvoice(invoice);
-//
-//        invoiceViewModel.setInvoiceId(invoice.getInvoiceId());
-//
-//        return invoiceViewModel;
-//    }
-//
-//    public void updateInvoice(InvoiceViewModel invoiceViewModel) {
-//
-//        Invoice invoice = new Invoice();
-//        invoice.setInvoiceId(invoiceViewModel.getInvoiceId());
-//        invoice.setName(invoiceViewModel.getName());
-//        invoice.setStreet(invoiceViewModel.getStreet());
-//        invoice.setCity(invoiceViewModel.getCity());
-//        invoice.setState(invoiceViewModel.getState());
-//        invoice.setZipcode(invoiceViewModel.getZipcode());
-//        invoice.setItemType(invoiceViewModel.getItemType());
-//        invoice.setItemId(invoiceViewModel.getItemId());
-//        invoice.setUnitPrice(invoiceViewModel.getUnitPrice());
-//        invoice.setQuantity(invoiceViewModel.getQuantity());
-//        invoice.setSubtotal(invoiceViewModel.getSubtotal());
-//        invoice.setTax(invoiceViewModel.getTax());
-//        invoice.setProcessingFee(invoiceViewModel.getProcessingFee());
-//        invoice.setTotal(invoiceViewModel.getTotal());
-//
-//        invoiceDao.updateInvoice(invoice);
-//    }
-//
-//    public InvoiceViewModel getInvoiceById(int id) {
-//        Invoice invoice = invoiceDao.getInvoice(id);
-//        if (invoice == null)
-//            return null;
-//        else
-//            return buildInvoiceViewModel(invoice);
-//    }
-//
-//    public void deleteInvoice(int id) {
-//        invoiceDao.deleteInvoice(id);
-//    }
 
-    //Consoles
+
+    //consoles
 
     public ConsoleViewModel saveConsole(ConsoleViewModel consoleViewModel) {
         Console console = new Console();
@@ -109,6 +52,7 @@ public class GameStoreServiceLayer {
         console.setProcessor(consoleViewModel.getProcessor());
         console.setPrice(consoleViewModel.getPrice());
         console.setConsoleId(console.getConsoleId());
+        console.setQuantity(consoleViewModel.getQuantity());
 
         console = consoleDao.addConsole(console);
 
@@ -126,11 +70,21 @@ public class GameStoreServiceLayer {
             return buildConsoleViewModel(console);
     }
 
-    public List<ConsoleViewModel> getConsolesByManufacturer(String manufacturer){
+    public List<ConsoleViewModel> getAllConsoles() {
+        List<Console> consoles = consoleDao.getAllConsoles();
+        List<ConsoleViewModel> cvmList = new ArrayList<>();
+        for (Console c : consoles) {
+            ConsoleViewModel cvm = buildConsoleViewModel(c);
+            cvmList.add(cvm);
+        }
+        return cvmList;
+    }
+
+    public List<ConsoleViewModel> getConsolesByManufacturer(String manufacturer) {
         List<Console> cList = consoleDao.getConsoleByManufacturer(manufacturer);
         List<ConsoleViewModel> cvmList = new ArrayList<>();
 
-        for (Console c : cList){
+        for (Console c : cList) {
             cvmList.add(buildConsoleViewModel(c));
         }
         if (cList.size() == 0)
@@ -147,7 +101,7 @@ public class GameStoreServiceLayer {
         console.setMemoryAmount(consoleViewModel.getMemoryAmount());
         console.setProcessor(consoleViewModel.getProcessor());
         console.setPrice(consoleViewModel.getPrice());
-        console.setConsoleId(console.getConsoleId());
+        console.setQuantity(consoleViewModel.getQuantity());
 
         consoleDao.updateConsole(console);
     }
@@ -158,6 +112,7 @@ public class GameStoreServiceLayer {
 
 
     //Games
+
     public GameViewModel addGame(GameViewModel gameViewModel) {
         Game game = new Game();
         game.setTitle(gameViewModel.getTitle());
@@ -176,11 +131,52 @@ public class GameStoreServiceLayer {
 
     public GameViewModel getGameById(int id) {
         Game game = gameDao.getGame(id);
-        if (game == null)
-            return null;
-        else
-            return buildGameViewModel(game);
+        return buildGameViewModel(game);
     }
+
+    public List<GameViewModel> getAllGames() {
+        List<Game> gList = gameDao.getAllGames();
+        List<GameViewModel> gvmList = new ArrayList<>();
+
+        for (Game g : gList) {
+            GameViewModel gvm = buildGameViewModel(g);
+            gvmList.add(gvm);
+        }
+
+        return gvmList;
+
+    }
+
+    public List<GameViewModel> getGamesByStudio(String studio) {
+        List<Game> gList = gameDao.findGamesByStudio(studio);
+        List<GameViewModel> gvmList = new ArrayList<>();
+        for (Game g : gList) {
+            GameViewModel gvm = buildGameViewModel(g);
+            gvmList.add(gvm);
+        }
+        return gvmList;
+    }
+
+    public List<GameViewModel> getGamesByTitle(String title) {
+        List<Game> gList = gameDao.findGamesByTitle(title);
+        List<GameViewModel> gvmList = new ArrayList<>();
+        for (Game g : gList) {
+            GameViewModel gvm = buildGameViewModel(g);
+            gvmList.add(gvm);
+        }
+        return gvmList;
+    }
+
+    public List<GameViewModel> getGamesByErsbRating(String ersbRating) {
+        List<Game> gList = gameDao.findGamesByERSB(ersbRating);
+        List<GameViewModel> gvmList = new ArrayList<>();
+        for (Game g : gList) {
+            GameViewModel gvm = buildGameViewModel(g);
+            gvmList.add(gvm);
+        }
+        return gvmList;
+    }
+
 
     public void updateGame(GameViewModel gameViewModel) {
         Game game = new Game();
@@ -197,6 +193,8 @@ public class GameStoreServiceLayer {
 
     public void deleteGame(int id) {
         gameDao.deleteGame(id);
+
+
     }
 
 
@@ -220,10 +218,43 @@ public class GameStoreServiceLayer {
 
     public TShirtViewModel getTShirt(int id) {
         TShirt tshirt = tShirtDao.getTShirt(id);
-        if (tshirt == null)
-            return null;
-        else
             return buildTShirtViewModel(tshirt);
+    }
+
+    public List<TShirtViewModel> getAllTShirts(){
+        List<TShirt> tList= tShirtDao.getAllTShirts();
+        List<TShirtViewModel> tvmList = new ArrayList<>();
+
+        for (TShirt t : tList){
+            TShirtViewModel tvm = buildTShirtViewModel(t);
+            tvmList.add(tvm);
+        }
+
+        return tvmList;
+    }
+
+    public List<TShirtViewModel> getTShirtsByColor(String color){
+        List<TShirt> tList= tShirtDao.getTShirtsByColor(color);
+        List<TShirtViewModel> tvmList = new ArrayList<>();
+
+        for (TShirt t : tList){
+            TShirtViewModel tvm = buildTShirtViewModel(t);
+            tvmList.add(tvm);
+        }
+
+        return tvmList;
+    }
+
+    public List<TShirtViewModel> getTShirtsBySize(String size){
+        List<TShirt> tList= tShirtDao.getTShirtsBySize(size);
+        List<TShirtViewModel> tvmList = new ArrayList<>();
+
+        for (TShirt t : tList){
+            TShirtViewModel tvm = buildTShirtViewModel(t);
+            tvmList.add(tvm);
+        }
+
+        return tvmList;
     }
 
     public void updateTShirt(TShirtViewModel tShirtViewModel) {
@@ -242,6 +273,94 @@ public class GameStoreServiceLayer {
         tShirtDao.deleteTShirt(id);
     }
 
+
+    //Invoice
+
+    @Transactional
+    public InvoiceViewModel saveInvoice(InvoiceViewModel invoiceViewModel) {
+
+        //Persist Invoice Dto
+        Invoice invoice = new Invoice();
+        invoice.setName(invoiceViewModel.getName());
+        invoice.setStreet(invoiceViewModel.getStreet());
+        invoice.setCity(invoiceViewModel.getCity());
+        invoice.setState(invoiceViewModel.getState());
+        invoice.setZipcode(invoiceViewModel.getZipcode());
+        invoice.setItemType(invoiceViewModel.getItemType());
+        invoice.setItemId(invoiceViewModel.getItemId());
+        invoice.setQuantity(invoiceViewModel.getQuantity());
+
+        // Getting Item Information
+        // 4. The order process logic must properly update the quantity on hand for the item in the order.
+        // 6. Order quantity must be less than or equal to the number of items on hand in inventory.
+
+        BigDecimal itemPrice;
+
+        if (invoice.getItemType().equals("Consoles")) {
+            Console item = consoleDao.getConsole(invoice.getItemId());
+            int itemQuantity = item.getQuantity();
+            itemPrice = item.getPrice();
+            // 6. Order quantity must be less than or equal to the number of items on hand in inventory.
+            if (invoice.getQuantity() > itemQuantity) {
+                throw new IllegalArgumentException("Not enough items on hand.");
+            } else {
+                item.setQuantity(itemQuantity - invoice.getQuantity());
+                consoleDao.updateConsole(item);
+            }
+        } else if (invoice.getItemType().equals("T-Shirts")) {
+            TShirt item = tShirtDao.getTShirt(invoice.getItemId());
+            int itemQuantity = item.getQuantity();
+            itemPrice = item.getPrice();
+            // 6. Order quantity must be less than or equal to the number of items on hand in inventory.
+            if (invoice.getQuantity() > itemQuantity) {
+                throw new IllegalArgumentException("Not enough items on hand.");
+            } else {
+                item.setQuantity(itemQuantity - invoice.getQuantity());
+                tShirtDao.updateTShirt(item);
+            }
+        } else if (invoice.getItemType().equals("Games")) {
+            Game item = gameDao.getGame(invoice.getItemId());
+            int itemQuantity = item.getQuantity();
+            itemPrice = item.getPrice();
+            // 6. Order quantity must be less than or equal to the number of items on hand in inventory.
+            if (invoice.getQuantity() > itemQuantity) {
+                throw new IllegalArgumentException("Not enough items on hand.");
+            } else {
+                item.setQuantity(itemQuantity - invoice.getQuantity());
+                gameDao.updateGame(item);
+            }
+        } else {
+            throw new IllegalArgumentException("Item type not correct! Please choose [Games], [T-Shirts], or [Consoles].");
+        }
+
+        // Setting Unit Price
+        invoice.setUnitPrice(itemPrice.setScale(2));
+
+        //Getting Tax_Rate and processing_Fees
+        BigDecimal taxRate = taxRateDao.getTax(invoice.getState());
+        BigDecimal processingFee = processingFeeDao.getProcessingFee(invoice.getItemType());
+
+        // Calculating Subtotal
+        invoice.setSubtotal(BigDecimal.valueOf(invoice.getQuantity()).multiply(invoice.getUnitPrice()).setScale(2));
+
+        // Calculating Tax
+        invoice.setTax(taxRate.multiply(invoice.getSubtotal()).setScale(2, RoundingMode.HALF_UP));
+
+        // Calculating Processing Fee
+        if (invoice.getQuantity() > 10) {
+            invoice.setProcessingFee(new BigDecimal("15.49").setScale(2).add(processingFee).setScale(2));
+        } else {
+            invoice.setProcessingFee(processingFee.setScale(2));
+        }
+
+        // Calculating Total
+        invoice.setTotal(invoice.getSubtotal().add(invoice.getTax()).add(invoice.getProcessingFee()).setScale(2));
+
+        //Add to DB
+        invoice = invoiceDao.addInvoice(invoice);
+
+        return buildInvoiceViewModel(invoice);
+    }
 
     // ------------------------------------------------------------------------------
 

@@ -1,5 +1,6 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.controllers;
 
+import com.trilogyed.DarylCimafrancaU1Capstone.dto.Console;
 import com.trilogyed.DarylCimafrancaU1Capstone.exception.NotFoundException;
 import com.trilogyed.DarylCimafrancaU1Capstone.service.GameStoreServiceLayer;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.ConsoleViewModel;
@@ -32,7 +33,13 @@ public class ConsoleController {
         return consoleViewModel;
     }
 
-    @GetMapping("/{manufacturer}")
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<ConsoleViewModel> getAllConsoles(){
+        return gameStoreServiceLayer.getAllConsoles();
+    }
+
+    @GetMapping("/manufacturer/{manufacturer}")
     @ResponseStatus(HttpStatus.OK)
     public List<ConsoleViewModel> getConsolesByManufacturer(@PathVariable("manufacturer") String manufacturer) {
         List<ConsoleViewModel> cvmList = gameStoreServiceLayer.getConsolesByManufacturer(manufacturer);
@@ -42,22 +49,17 @@ public class ConsoleController {
     }
 
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteConsole(@PathVariable("id") int id){
+    public String deleteConsole(@PathVariable("id") int id){
         gameStoreServiceLayer.deleteConsole(id);
+        return "Console successfully deleted.";
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateConsole(@PathVariable("id") int id, @RequestBody @Valid ConsoleViewModel consoleViewModel) {
-        if (consoleViewModel.getConsoleId() == 0)
-            consoleViewModel.setConsoleId(id);
-        if (id != consoleViewModel.getConsoleId()){
-            throw new IllegalArgumentException("Console IDs must match");
-        }
-
-
+    public String updateConsole(@PathVariable("id") int id, @RequestBody @Valid ConsoleViewModel consoleViewModel) {
         gameStoreServiceLayer.updateConsole(consoleViewModel);
+        return "Console successfully updated.";
     }
 }

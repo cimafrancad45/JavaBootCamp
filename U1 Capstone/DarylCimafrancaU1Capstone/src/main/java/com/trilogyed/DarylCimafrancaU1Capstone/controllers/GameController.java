@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/game")
@@ -24,26 +25,48 @@ public class GameController {
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ConsoleViewModel getGame(@PathVariable("id") int id) {
-        ConsoleViewModel consoleViewModel = gameStoreServiceLayer.getConsoleById(id);
-        if (consoleViewModel == null)
+    public GameViewModel getGame(@PathVariable("id") int id) {
+        GameViewModel game = gameStoreServiceLayer.getGameById(id);
+        if (game == null)
             throw new NotFoundException("Console could not be found under id" + id);
-        return consoleViewModel;
+        return game;
     }
 
-    @DeleteMapping("{id}")
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<GameViewModel> getAllGames(){
+        return gameStoreServiceLayer.getAllGames();
+    }
+
+    @GetMapping("/title/{title}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<GameViewModel> getGamesByTitle(@PathVariable("title") String title){
+        return gameStoreServiceLayer.getGamesByTitle(title);
+    }
+
+    @GetMapping("/studio/{studio}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<GameViewModel> getGamesByStudio(@PathVariable("studio") String studio) {
+        return gameStoreServiceLayer.getGamesByStudio(studio);
+    }
+
+    @GetMapping("/ersb/{ersb_rating}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<GameViewModel> getGamesByErsb(@PathVariable("ersb_rating") String ersbRating){
+        return gameStoreServiceLayer.getGamesByErsbRating(ersbRating);
+    }
+
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteConsole(@PathVariable("id") int id) {
+    public String deleteConsole(@PathVariable("id") int id) {
         gameStoreServiceLayer.deleteGame(id);
+        return "Game successfully deleted.";
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateGame(@PathVariable("id") int id, @RequestBody @Valid GameViewModel game) {
-        if (game.getGameId() == 0)
-            game.setGameId(id);
-        if (id != game.getGameId()) {
-            throw new IllegalArgumentException("Game IDs must match");
-        }
+    public String updateGame(@PathVariable("id") int id, @RequestBody @Valid GameViewModel gameViewModel) {
+        gameStoreServiceLayer.updateGame(gameViewModel);
+        return "Game successfully updated.";
     }
 }

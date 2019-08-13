@@ -29,6 +29,8 @@ public class CommentJdbcTemplateImpl implements CommentDao {
             "select * from comment where comment_id = ?";
     private final String GET_ALL_COMMENTS_SQL =
             "select * from comment";
+    private final String GET_COMMENTS_BY_POST_ID =
+            "select * from comment where post_id = ?";
     private final String UPDATE_COMMENT_SQL =
             "update comment set post_id = ?, create_date = ?, commenter_name = ?, comment = ? where comment_id = ?";
     private final String DELETE_COMMENT_SQL =
@@ -59,6 +61,11 @@ public class CommentJdbcTemplateImpl implements CommentDao {
     @Override
     public List<Comment> getAllComments(){
         return jdbcTemplate.query(GET_ALL_COMMENTS_SQL, this::mapRowToComment);
+    }
+
+    @Override
+    public List<Comment> getCommentsByPostId(int id) {
+        return jdbcTemplate.query(GET_COMMENTS_BY_POST_ID, this::mapRowToComment, id);
     }
 
     @Override

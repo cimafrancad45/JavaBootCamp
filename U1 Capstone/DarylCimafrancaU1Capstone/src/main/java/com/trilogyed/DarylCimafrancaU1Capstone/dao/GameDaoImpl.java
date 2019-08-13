@@ -38,6 +38,7 @@ public class GameDaoImpl implements GameDao{
     private final String DELETE_GAME =
             "delete from game where game_id = ?";
 
+    @Override
     public Game addGame(Game game){
         jdbcTemplate.update(INSERT_GAME_SQL,
                 game.getTitle(),
@@ -51,6 +52,7 @@ public class GameDaoImpl implements GameDao{
         return game;
     }
 
+    @Override
     public Game getGame(int id){
         try {
             return jdbcTemplate.queryForObject(SELECT_GAME_SQL, this::mapGameToRow, id);
@@ -59,10 +61,12 @@ public class GameDaoImpl implements GameDao{
         }
     }
 
+    @Override
     public List<Game> getAllGames() {
         return jdbcTemplate.query(SELECT_ALL_GAMES_SQL, this::mapGameToRow);
     }
 
+    @Override
     public List<Game> findGamesByTitle(String title){
         return jdbcTemplate.query(SELECT_GAMES_BY_TITLE, this::mapGameToRow, title);
     }

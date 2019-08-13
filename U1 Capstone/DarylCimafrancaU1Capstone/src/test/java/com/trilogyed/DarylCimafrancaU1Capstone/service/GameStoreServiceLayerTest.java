@@ -1,10 +1,7 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.service;
 
 import com.trilogyed.DarylCimafrancaU1Capstone.dao.*;
-import com.trilogyed.DarylCimafrancaU1Capstone.dto.Console;
-import com.trilogyed.DarylCimafrancaU1Capstone.dto.Game;
-import com.trilogyed.DarylCimafrancaU1Capstone.dto.Invoice;
-import com.trilogyed.DarylCimafrancaU1Capstone.dto.TShirt;
+import com.trilogyed.DarylCimafrancaU1Capstone.dto.*;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.InvoiceViewModel;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.TShirtViewModel;
 import junit.framework.TestCase;
@@ -26,20 +23,148 @@ public class GameStoreServiceLayerTest {
     TShirtDao tShirtDao;
     InvoiceDao invoiceDao;
     GameStoreServiceLayer service;
-    @Autowired
     TaxRateDao taxRateDao;
-    @Autowired
     ProcessingFeeDao processingFeeDao;
 
     @Before
     public void setUp() throws Exception{
 
+        setUpTaxRateDaoMock();
+        setUpProcessingFeeDaoMock();
         setUpConsoleDaoMock();
         setUpGameDaoMock();
         setUpTShirtDaoMock();
         setUpInvoiceDaoMock();
 
-        service = new GameStoreServiceLayer(gameDao,consoleDao,tShirtDao,invoiceDao);
+        service = new GameStoreServiceLayer(gameDao,consoleDao,tShirtDao,invoiceDao, taxRateDao, processingFeeDao);
+    }
+
+    @Test
+    public void saveFindInvoice(){
+        Invoice invoice = new Invoice();
+
+        invoice.setName("Justin");
+        invoice.setStreet("24 Lotus Ave");
+        invoice.setCity("Princeton Junction");
+        invoice.setState("NJ");
+        invoice.setZipcode("08550");
+        invoice.setItemType("Consoles");
+        invoice.setItemId(39);
+        invoice.setUnitPrice(new BigDecimal("499.99"));
+        invoice.setQuantity(1);
+        invoice.setSubtotal(invoice.getUnitPrice().
+                add(invoice.getUnitPrice().multiply(taxRateDao.getTax(invoice.getState())))
+                .multiply(new BigDecimal(invoice.getQuantity())).setScale(2, BigDecimal.ROUND_HALF_UP));
+        invoice.setTax(taxRateDao.getTax(invoice.getState()));
+        invoice.setProcessingFee(processingFeeDao.getProcessingFee(invoice.getItemType()));
+        invoice.setTotal(invoice.getSubtotal().
+                add(invoice.getProcessingFee()).setScale(2, BigDecimal.ROUND_HALF_UP));
+
+
+        invoice = invoiceDao.addInvoice(invoice);
+
+        Invoice invoice2 = invoiceDao.getInvoice(invoice.getInvoiceId());
+
+        assertEquals(invoice2, invoice);
+
+    }
+
+    @Test
+    public void saveFindConsole(){
+        Console console = new Console();
+
+        console.setModel("Playstation 4");
+        console.setManufacturer("Sony");
+        console.setProcessor("ARM processor");
+        console.setMemoryAmount("32GB");
+        console.setPrice(new BigDecimal("499.99"));
+        console.setQuantity(25);
+
+        console = consoleDao.addConsole(console);
+
+        Console console2 = consoleDao.getConsole(console.getConsoleId());
+
+        assertEquals(console, console2);
+
+    }
+
+    @Test
+    public void getConsolesByManufacturer(){
+
+        Console console = new Console();
+
+        console.setModel("Playstation 4");
+        console.setManufacturer("Sony");
+        console.setProcessor("ARM processor");
+        console.setMemoryAmount("32GB");
+        console.setPrice(new BigDecimal("499.99"));
+        console.setQuantity(25);
+
+        consoleDao.addConsole(console);
+
+        List<Console> sonyList = consoleDao.getConsoleByManufacturer("Sony");
+
+        TestCase.assertEquals(sonyList.size(), 1);
+    }
+
+    @Test
+    public void saveFindGame(){
+        Game game = new Game();
+
+        game.setTitle("Samurai Showdown");
+        game.setErsbRating("M");
+        game.setDescription("A return of an arcade classic fighting game!");
+        game.setStudio("SNK");
+        game.setPrice(new BigDecimal ("59.99"));
+        game.setQuantity(10);
+
+        game = gameDao.addGame(game);
+
+        Game game2 = gameDao.getGame(game.getGameId());
+
+        assertEquals(game, game2);
+
+    }
+
+    @Test
+    public void addGetTShirt(){
+        TShirtViewModel shirt = new TShirtViewModel();
+
+        shirt.setSize("M");
+        shirt.setColor("Blue");
+        shirt.setDescription("A Sonic T-shirt");
+        shirt.setPrice(new BigDecimal("9.99"));
+        shirt.setQuantity(4);
+
+        shirt = service.addTShirt(shirt);
+        TShirtViewModel fromService = service.getTShirt(shirt.getTShirtId());
+
+        assertEquals(fromService, shirt);
+
+    }
+
+    //
+    //Mockito Tests
+    //
+
+    private void setUpTaxRateDaoMock() {
+        taxRateDao = mock(TaxRateDaoImpl.class);
+
+        TaxRate taxRate = new TaxRate();
+        taxRate.setState("NJ");
+        taxRate.setRate(new BigDecimal("0.05").setScale(2));
+
+        doReturn(taxRate).when(taxRateDao).getTax("NJ");
+    }
+
+    private void setUpProcessingFeeDaoMock() {
+        processingFeeDao = mock(ProcessingFeeDaoImpl.class);
+
+        ProcessingFee processingFee = new ProcessingFee();
+        processingFee.setProductType("T-Shirts");
+        processingFee.setFee(new BigDecimal("1.98").setScale(2));
+
+        doReturn(processingFee).when(processingFeeDao).getProcessingFee("T-Shirts");
     }
 
     private void setUpConsoleDaoMock(){
@@ -179,110 +304,6 @@ public class GameStoreServiceLayerTest {
         doReturn(invoice).when(invoiceDao).addInvoice(invoice2);
         doReturn(invoice).when(invoiceDao).getInvoice(3);
         doReturn(ivcList).when(invoiceDao).getAllInvoices();
-
-    }
-
-    @Test
-    public void saveFindInvoice(){
-        Invoice invoice = new Invoice();
-
-        invoice.setName("Justin");
-        invoice.setStreet("24 Lotus Ave");
-        invoice.setCity("Princeton Junction");
-        invoice.setState("NJ");
-        invoice.setZipcode("08550");
-        invoice.setItemType("Consoles");
-        invoice.setItemId(39);
-        invoice.setUnitPrice(new BigDecimal("499.99"));
-        invoice.setQuantity(1);
-        invoice.setSubtotal(invoice.getUnitPrice().
-                add(invoice.getUnitPrice().multiply(taxRateDao.getTax(invoice.getState())))
-                .multiply(new BigDecimal(invoice.getQuantity())).setScale(2, BigDecimal.ROUND_HALF_UP));
-        invoice.setTax(taxRateDao.getTax(invoice.getState()));
-        invoice.setProcessingFee(processingFeeDao.getProcessingFee(invoice.getItemType()));
-        invoice.setTotal(invoice.getSubtotal().
-                add(invoice.getProcessingFee()).setScale(2, BigDecimal.ROUND_HALF_UP));
-
-
-        invoice = invoiceDao.addInvoice(invoice);
-
-        Invoice invoice2 = invoiceDao.getInvoice(invoice.getInvoiceId());
-
-        assertEquals(invoice2, invoice);
-
-    }
-
-    @Test
-    public void saveFindConsole(){
-        Console console = new Console();
-
-        console.setModel("Playstation 4");
-        console.setManufacturer("Sony");
-        console.setProcessor("ARM processor");
-        console.setMemoryAmount("32GB");
-        console.setPrice(new BigDecimal("499.99"));
-        console.setQuantity(25);
-
-        console = consoleDao.addConsole(console);
-
-        Console console2 = consoleDao.getConsole(console.getConsoleId());
-
-        assertEquals(console, console2);
-
-    }
-
-    @Test
-    public void getConsolesByManufacturer(){
-
-        Console console = new Console();
-
-        console.setModel("Playstation 4");
-        console.setManufacturer("Sony");
-        console.setProcessor("ARM processor");
-        console.setMemoryAmount("32GB");
-        console.setPrice(new BigDecimal("499.99"));
-        console.setQuantity(25);
-
-        consoleDao.addConsole(console);
-
-        List<Console> sonyList = consoleDao.getConsoleByManufacturer("Sony");
-
-        TestCase.assertEquals(sonyList.size(), 1);
-    }
-
-    @Test
-    public void saveFindGame(){
-        Game game = new Game();
-
-        game.setTitle("Samurai Showdown");
-        game.setErsbRating("M");
-        game.setDescription("A return of an arcade classic fighting game!");
-        game.setStudio("SNK");
-        game.setPrice(new BigDecimal ("59.99"));
-        game.setQuantity(10);
-
-        game = gameDao.addGame(game);
-
-        Game game2 = gameDao.getGame(game.getGameId());
-
-        assertEquals(game, game2);
-
-    }
-
-    @Test
-    public void addGetTShirt(){
-        TShirtViewModel shirt = new TShirtViewModel();
-
-        shirt.setSize("M");
-        shirt.setColor("Blue");
-        shirt.setDescription("A Sonic T-shirt");
-        shirt.setPrice(new BigDecimal("9.99"));
-        shirt.setQuantity(4);
-
-        shirt = service.addTShirt(shirt);
-        TShirtViewModel fromService = service.getTShirt(shirt.getTShirtId());
-
-        assertEquals(fromService, shirt);
 
     }
 

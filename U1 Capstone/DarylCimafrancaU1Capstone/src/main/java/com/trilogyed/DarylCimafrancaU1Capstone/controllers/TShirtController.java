@@ -1,5 +1,6 @@
 package com.trilogyed.DarylCimafrancaU1Capstone.controllers;
 
+import com.trilogyed.DarylCimafrancaU1Capstone.dto.TShirt;
 import com.trilogyed.DarylCimafrancaU1Capstone.exception.NotFoundException;
 import com.trilogyed.DarylCimafrancaU1Capstone.service.GameStoreServiceLayer;
 import com.trilogyed.DarylCimafrancaU1Capstone.viewmodel.TShirtViewModel;
@@ -8,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/tshirt")
@@ -30,19 +32,24 @@ public class TShirtController {
         return tShirtViewModel;
     }
 
-    @DeleteMapping("{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteTShirt(@PathVariable("id") int id) {
-        gameStoreServiceLayer.deleteTShirt(id);
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<TShirtViewModel> getAllShirts(){
+        return gameStoreServiceLayer.getAllTShirts();
     }
 
-    @PutMapping("{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateTShirt(@PathVariable("id") int id, @RequestBody @Valid TShirtViewModel tShirtViewModel) {
-        if (tShirtViewModel.getTShirtId() == 0)
-            tShirtViewModel.settShirtId(id);
-        if (id != tShirtViewModel.getTShirtId()) {
-            throw new IllegalArgumentException("TShirt IDs must match");
-        }
+    public String deleteTShirt(@PathVariable("id") int id) {
+        gameStoreServiceLayer.deleteTShirt(id);
+        return "T-Shirt successfully deleted.";
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public String updateTShirt(@PathVariable("id") int id, @RequestBody @Valid TShirtViewModel tShirtViewModel) {
+
+        gameStoreServiceLayer.updateTShirt(tShirtViewModel);
+        return "T-Shirt successfully updated.";
     }
 }

@@ -4,6 +4,7 @@ import com.trilogyed.comment.dao.CommentDao;
 import com.trilogyed.comment.model.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,10 +27,16 @@ public class CommentController {
     @GetMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Comment getComment(@PathVariable("id") int id){
-        if (commentDao.getComment(id) == null)
-            //placeholder exception handling
-            return null;
+        if (commentDao.getComment(id) == null) {
+            throw new EmptyResultDataAccessException(0);
+        }
         return commentDao.getComment(id);
+    }
+
+    @GetMapping(value = "/{postId}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Comment> getCommentsByPost(@PathVariable("id") int id){
+        return commentDao.getCommentsByPostId(id);
     }
 
     @GetMapping
