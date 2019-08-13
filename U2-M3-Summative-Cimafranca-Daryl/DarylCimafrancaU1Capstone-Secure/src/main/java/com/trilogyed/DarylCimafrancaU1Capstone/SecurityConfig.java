@@ -44,14 +44,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.httpBasic();
 
         httpSecurity.authorizeRequests()
-                .mvcMatchers("/customer").authenticated()
-                .mvcMatchers(HttpMethod.POST, "/invoice").hasAuthority("ROLE_REGISTERED")
+//                .mvcMatchers("/customer").authenticated()
+                .mvcMatchers(HttpMethod.PUT, "/consoles").hasAuthority("ROLE_STAFF")
+                .mvcMatchers(HttpMethod.PUT, "/games").hasAuthority("ROLE_STAFF")
+                .mvcMatchers(HttpMethod.PUT, "/tshirt").hasAuthority("ROLE_STAFF")
+                .mvcMatchers(HttpMethod.POST, "/consoles").hasAuthority("ROLE_MANAGER")
                 .mvcMatchers(HttpMethod.POST, "/games").hasAuthority("ROLE_MANAGER")
-                .mvcMatchers(HttpMethod.POST, "/games").hasAuthority("ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.PUT, "/games").hasAuthority("ROLE_ADMIN")
+                .mvcMatchers(HttpMethod.POST, "/tshirt").hasAuthority("ROLE_MANAGER")
+                .mvcMatchers(HttpMethod.DELETE, "/consoles").hasAuthority("ROLE_ADMIN")
                 .mvcMatchers(HttpMethod.DELETE, "/games").hasAuthority("ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.POST, "/tshirts").hasAuthority("ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.PUT, "/tshirts").hasAuthority("ROLE_ADMIN")
                 .mvcMatchers(HttpMethod.DELETE, "/tshirts").hasAuthority("ROLE_ADMIN")
                 .anyRequest().permitAll();
 
